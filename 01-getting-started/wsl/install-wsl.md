@@ -5,42 +5,40 @@ Modified:
 
 # Install Windows Subsystem for Linux (WSL)
 
-WSL allows Linux distributions such as Ubuntu to run directly within Windows without requiring a traditional virtual machine or dual-boot configuration. It provides a lightweight, fast way to access Linux command-line tools, utilities, and development frameworks while continuing to use standard Windows applications.
+Windows Subsystem for Linux (WSL) allows Linux distributions such as Ubuntu to run directly within Windows without requiring a traditional virtual machine or dual-boot configuration. It provides access to Linux command-line tools, package managers, utilities, and development frameworks while continuing to use Windows as the primary operating system.
 
-This makes WSL especially useful for software development because Linux-based tools and workflows can run alongside Windows applications such as Visual Studio Code, Docker Desktop, and web browsers.
+WSL is especially useful for software development because many development tools and production environments are Linux-based. It allows Linux workflows to run alongside Windows applications such as Visual Studio Code, Docker Desktop, and web browsers, providing the benefits of both environments on the same system.
 
-Ubuntu is installed by default, but WSL also supports other Linux distributions if a different environment is preferred.
+This guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the Ubuntu environment is installed and running with WSL 2.
 
 > [!NOTE]
 > For general WSL commands after installation, see [WSL Commands](commands.md).
 
-
 ## Overview
 
-1. [Install WSL](#1-install-wsl)
-2. [Install Ubuntu](#2-install-ubuntu)
-3. [Verify Installation](#3-verify-installation)
+1. [Install WSL](#install-wsl)
+2. [Install Ubuntu](#install-ubuntu)
+3. [Verify Installation](#verify-installation)
 
+## Install WSL
 
-## 1. Install WSL
-
-Open **PowerShell as Administrator**.
+1. Open **PowerShell as Administrator**.
 
 ```powershell
 wsl --install
 ```
 
-After the installation completes, reboot Windows for the changes to take effect.
+2. After the installation completes, reboot Windows for the changes to take effect.
 
-## 2. Install Ubuntu
+## Install Ubuntu
 
-Open **PowerShell as Administrator**.
+1. Open **PowerShell as Administrator**.
 
 ```powershell
 wsl --install Ubuntu
 ```
 
-After the installation completes, Ubuntu will start in the same PowerShell window and prompt you to create a Linux user and set a password.
+2. After the installation completes, Ubuntu will start in the same PowerShell window and prompt you to create a Linux user and set a password.
 
 > [!IMPORTANT]
 > The Linux username and password are separate from your Windows account credentials. When entering the password, no characters will appear on screen. This is normal Linux terminal behavior.
@@ -64,21 +62,21 @@ After completing the initial setup, the terminal will enter the **Ubuntu environ
 > wsl --install <Distro>
 > ```
 
-## 3. Verify Installation
+## Verify Installation
 
-Exit the **Ubuntu environment** to return to **PowerShell**. Alternatively, you can open a new **PowerShell** window.
+1. Exit the **Ubuntu environment** to return to **PowerShell**. Alternatively, open a new **PowerShell** window and skip this step.
 
 ```bash
 exit
 ```
 
-Check the installed Linux distributions and WSL version in **PowerShell**.
+2. Check the installed Linux distributions and WSL version in **PowerShell**.
 
 ```powershell
 wsl --list --verbose
 ```
 
-Confirm the installed Linux distribution and WSL version. The `*` indicates the default Linux distribution. The `STATE` value may vary from the example below.
+3. Confirm the installed Linux distribution and that the `VERSION` column shows `2`. The `*` indicates the default Linux distribution. The `STATE` value may vary from the example below.
 
 ```text
   NAME      STATE           VERSION
