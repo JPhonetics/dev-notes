@@ -1,7 +1,6 @@
 ---
 Created: 2026-10-05
 Modified: 
-Tags: [install, linux, powershell, windows, wsl]
 ---
 
 # Install Windows Subsystem for Linux (WSL)
@@ -15,11 +14,13 @@ Ubuntu is installed by default, but WSL also supports other Linux distributions 
 > [!NOTE]
 > For general WSL commands after installation, see [WSL Commands](commands.md).
 
+
 ## Overview
 
 1. [Install WSL](#1-install-wsl)
 2. [Install Ubuntu](#2-install-ubuntu)
 3. [Verify Installation](#3-verify-installation)
+
 
 ## 1. Install WSL
 

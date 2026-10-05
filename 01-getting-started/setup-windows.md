@@ -1,7 +1,6 @@
 ---
 Created: 2026-10-05
 Modified: 
-Tags: [development, install, linux, powershell, windows, wsl]
 ---
 
 # Setup Windows for Development
@@ -20,9 +19,10 @@ The environment combines the convenience of Windows applications with the Linux 
 <details>
 <summary><strong>1. Install WSL</strong></summary>
 
+<br>
+
 WSL provides the Linux environment used throughout this development setup. It allows Linux-based tools, utilities, and workflows to run alongside standard Windows applications.
 
-> [!IMPORTANT]
-> **Setup Guide:** [Install Windows Subsystem for Linux (WSL)](./wsl/install-wsl.md)
+➡️ **Setup Guide:** [Open Guide](./wsl/install-wsl.md)
 
 </details>
