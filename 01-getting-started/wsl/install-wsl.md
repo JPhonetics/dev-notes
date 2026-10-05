@@ -84,8 +84,6 @@ Confirm the installed Linux distribution and WSL version. The `*` indicates the 
 * Ubuntu    Running         2
 ```
 
----
-
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)
