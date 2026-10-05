@@ -5,14 +5,11 @@ Modified:
 
 # Setup Windows for Development
 
-Configure a Windows computer for software development using Windows Subsystem for Linux (WSL) and Ubuntu.
+This guide builds a complete Windows development environment that combines native Windows applications with a Linux development environment through Windows Subsystem for Linux (WSL). Windows remains the primary operating system, while Ubuntu provides access to Linux command-line tools, package managers, development frameworks, databases, containers, and other tools commonly used in modern software development.
 
-This guide provides the recommended setup path for creating a Windows development environment. Windows remains the primary operating system while WSL provides a Linux environment for development tools, command-line utilities, frameworks, databases, containers, and other Linux-based workflows.
+This setup provides the flexibility of working across both Windows and Linux without maintaining a separate Linux machine or dual-boot configuration. Windows applications such as Visual Studio Code, Docker Desktop, browsers, and other desktop tools can be used alongside Linux-based development workflows running through WSL.
 
-The environment combines the convenience of Windows applications with the Linux tooling commonly used for modern software development.
-
-> [!NOTE]
-> Detailed installation and configuration instructions are maintained in separate guides. This page provides the recommended setup order and explains how each component fits into the development environment.
+This guide provides the recommended installation and configuration order for the development environment. Each major component is documented in its own setup guide, while this page serves as the main roadmap for assembling the complete environment.
 
 ## Overview
 
@@ -25,9 +22,9 @@ Windows Subsystem for Linux (WSL) allows Linux distributions such as Ubuntu to r
 
 WSL is especially useful for software development because many development tools and production environments are Linux-based. It allows Linux workflows to run alongside Windows applications such as Visual Studio Code, Docker Desktop, and web browsers, providing the benefits of both environments on the same system.
 
-This guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the Ubuntu environment is installed and running with WSL 2.
+This setup guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the Ubuntu environment is installed and running with WSL 2.
 
-➡️ [Go to Guide](./wsl/install-wsl.md)
+📌 [Go to Guide](./wsl/install-wsl.md)
 
 </details>
 
@@ -40,8 +37,23 @@ Windows Terminal is a modern terminal application for command-line environments 
 
 It provides a cleaner and more efficient way to work across Windows and Linux command-line environments without switching between separate terminal applications. For development, it makes it easy to move between PowerShell and the Ubuntu environment running through WSL while keeping everything in one place.
 
-This guide installs Windows Terminal, configures Ubuntu as the default profile, and applies a few appearance settings to make the terminal more comfortable for everyday development.
+This setup guide installs Windows Terminal, configures Ubuntu as the default profile, and applies a few appearance settings to make the terminal more comfortable for everyday development.
 
-➡️ [Go to Guide](./windows/install-windows-terminal.md)
+📌 [Go to Guide](./windows/install-windows-terminal.md)
+
+</details>
+
+<details>
+<summary><strong>3. Update Ubuntu</strong></summary>
+
+<br>
+
+Ubuntu uses the Advanced Package Tool (APT) to manage software packages, dependencies, and system updates. Keeping the package lists and installed software current helps ensure the development environment has the latest available fixes, security updates, and current package versions.
+
+Updating Ubuntu is useful before installing development tools because many later setup steps depend on system packages and libraries provided by the Linux environment. Starting from an up-to-date system helps reduce installation issues caused by outdated package information or dependencies.
+
+This setup guide updates Ubuntu's package lists, installs available package upgrades, and removes packages that are no longer required.
+
+📌 [Go to Guide](./linux/update-ubuntu.md)
 
 </details>

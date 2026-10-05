@@ -37,7 +37,7 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 ## Configure Appearance
 
 > [!NOTE]
-> Color scheme and appearance settings can be configured per profile, allowing Ubuntu and PowerShell to use different visual settings if desired. Use the preview pane to test changes before saving.
+> Color scheme and appearance settings can be configured per profile, allowing Ubuntu and PowerShell to use different visual settings if desired.
 
 1. Open **Windows Terminal**.
 2. Click the `⌵` menu in the title bar.
@@ -50,6 +50,9 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
    - **Padding:** 10
    - **Scrollbar:** Visible
 6. Click **Save**.
+
+> [!TIP]
+> Use the preview pane to test changes before saving.
 
 ## Related Documentation
 
