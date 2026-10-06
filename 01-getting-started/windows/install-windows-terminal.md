@@ -7,7 +7,7 @@ Modified:
 
 Windows Terminal is a modern terminal application for command-line environments such as PowerShell, Command Prompt, and WSL. It supports multiple profiles, tabs, panes, and customizable appearance settings within a single interface.
 
-It provides a cleaner and more efficient way to work across Windows and Linux command-line environments without switching between separate terminal applications. For development, it makes it easy to move between PowerShell and the Ubuntu environment running through WSL while keeping everything in one place.
+It provides a cleaner and more efficient way to work across Windows and Linux command-line environments from one application. For development, it makes it easy to move between PowerShell and the Ubuntu environment running through WSL while keeping everything in one place.
 
 This guide installs Windows Terminal, configures Ubuntu as the default profile, and applies a few appearance settings to make the terminal more comfortable for everyday development.
 

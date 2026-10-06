@@ -9,7 +9,7 @@ Ubuntu uses the Advanced Package Tool (APT) to manage software packages, depende
 
 Updating Ubuntu is useful before installing development tools because many later setup steps depend on system packages and libraries provided by the Linux environment. Starting from an up-to-date system helps reduce installation issues caused by outdated package information or dependencies.
 
-This guide updates Ubuntu's package lists, installs available package upgrades, removes packages that are no longer required, and installs a small set of commonly used command-line utilities for development.
+This guide updates Ubuntu's package lists, installs available package updates, removes packages that are no longer required, and installs a small set of commonly used command-line utilities for development.
 
 ## Overview
 
@@ -35,7 +35,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-4. Remove packages that are no longer required. `apt autoremove` removes dependency packages that were installed automatically but are no longer required by any installed software.
+4. Remove packages that are no longer required. `apt autoremove` removes dependency packages that were installed automatically, but are no longer required by any installed software.
 
 ```bash
 sudo apt autoremove -y

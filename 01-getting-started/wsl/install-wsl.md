@@ -9,10 +9,7 @@ Windows Subsystem for Linux (WSL) allows Linux distributions such as Ubuntu to r
 
 WSL is especially useful for software development because many development tools and production environments are Linux-based. It allows Linux workflows to run alongside Windows applications such as Visual Studio Code, Docker Desktop, and web browsers, providing the benefits of both environments on the same system.
 
-This guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the Ubuntu environment is installed and running with WSL 2.
-
-> [!NOTE]
-> For general WSL commands after installation, see [WSL Commands](commands.md).
+This guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the Linux environment is installed and configured correctly.
 
 ## Overview
 

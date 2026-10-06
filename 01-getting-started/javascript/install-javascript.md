@@ -5,11 +5,11 @@ Modified:
 
 # Install JavaScript
 
-JavaScript is a programming language commonly used to build interactive websites, frontend applications, development tools, and server-side applications. While web browsers can execute JavaScript directly, local development also requires a JavaScript runtime outside of the browser.
+JavaScript is a programming language commonly used to build interactive websites, frontend applications, development tools, and server-side applications. While web browsers can execute JavaScript directly, local development tools and server-side JavaScript require a runtime outside of the browser.
 
 Node.js provides that runtime and allows JavaScript to execute from the command line. Node Package Manager (npm) is installed with Node.js and is used to install and manage JavaScript packages, development tools, frameworks, and project dependencies.
 
-This setup guide installs Node Version Manager (NVM), uses NVM to install the current Long-Term Support (LTS) version of Node.js, and verifies that Node.js and npm are ready for JavaScript development.
+This guide installs Node Version Manager (NVM), uses NVM to install the current Long-Term Support (LTS) version of Node.js, and verifies that Node.js and npm are ready for JavaScript development.
 
 ## Overview
 
@@ -46,6 +46,19 @@ nvm install --lts
 ```bash
 nvm current
 ```
+
+<br>
+
+> [!NOTE]
+> Check Node.js versions available to install:
+> ```bash
+> nvm ls-remote
+> ```
+>
+> Check Node.js versions already installed with NVM:
+> ```bash
+> nvm ls
+> ```
 
 <br>
 

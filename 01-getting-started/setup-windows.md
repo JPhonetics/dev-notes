@@ -18,11 +18,11 @@ This guide provides the recommended installation and configuration order for the
 
 <br>
 
-Windows Subsystem for Linux (WSL) allows Linux distributions such as Ubuntu to run directly within Windows without requiring a traditional virtual machine or dual-boot configuration. It provides access to Linux command-line tools, package managers, utilities, and development frameworks while continuing to use Windows as the primary operating system.
+Windows Subsystem for Linux (WSL) provides a Linux environment directly within Windows, allowing Linux command-line tools, package managers, and development workflows to run alongside Windows applications.
 
-WSL is especially useful for software development because many development tools and production environments are Linux-based. It allows Linux workflows to run alongside Windows applications such as Visual Studio Code, Docker Desktop, and web browsers, providing the benefits of both environments on the same system.
+WSL is used as the primary Linux development environment for this setup, providing access to the Linux tooling commonly used for modern software development without requiring a separate virtual machine or dual-boot configuration.
 
-This setup guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the Ubuntu environment is installed and running with WSL 2.
+This setup guide installs WSL and Ubuntu, completes the initial Linux user configuration, and verifies that the environment is installed correctly.
 
 📌 [Go to Guide](./wsl/install-wsl.md)
 
@@ -33,11 +33,11 @@ This setup guide installs WSL and Ubuntu, completes the initial Linux user confi
 
 <br>
 
-Windows Terminal is a modern terminal application for command-line environments such as PowerShell, Command Prompt, and WSL. It supports multiple profiles, tabs, panes, and customizable appearance settings within a single interface.
+Windows Terminal provides a modern interface for command-line environments such as PowerShell, Command Prompt, and WSL, with support for multiple profiles, tabs, panes, and appearance settings.
 
-It provides a cleaner and more efficient way to work across Windows and Linux command-line environments without switching between separate terminal applications. For development, it makes it easy to move between PowerShell and the Ubuntu environment running through WSL while keeping everything in one place.
+It provides a single place to work with both Windows and Linux command-line environments and serves as the primary terminal interface for accessing Ubuntu through WSL.
 
-This setup guide installs Windows Terminal, configures Ubuntu as the default profile, and applies a few appearance settings to make the terminal more comfortable for everyday development.
+This setup guide installs Windows Terminal, configures Ubuntu as the default profile, and applies basic appearance settings for development.
 
 📌 [Go to Guide](./windows/install-windows-terminal.md)
 
@@ -48,12 +48,42 @@ This setup guide installs Windows Terminal, configures Ubuntu as the default pro
 
 <br>
 
-Ubuntu uses the Advanced Package Tool (APT) to manage software packages, dependencies, and system updates. Keeping the package lists and installed software current helps ensure the development environment has the latest available fixes, security updates, and current package versions.
+Ubuntu provides the Linux environment used for development through WSL and uses APT to manage system packages, dependencies, and updates.
 
-Updating Ubuntu is useful before installing development tools because many later setup steps depend on system packages and libraries provided by the Linux environment. Starting from an up-to-date system helps reduce installation issues caused by outdated package information or dependencies.
+Keeping Ubuntu current provides an up-to-date foundation for the development tools installed later and helps prevent issues caused by outdated packages or dependencies.
 
-This setup guide updates Ubuntu's package lists, installs available package upgrades, removes packages that are no longer required, and installs a small set of commonly used command-line utilities for development.
+This setup guide updates Ubuntu, removes packages that are no longer required, and installs commonly used command-line utilities for development.
 
 📌 [Go to Guide](./linux/update-ubuntu.md)
+
+</details>
+
+<details>
+<summary><strong>3. Install Python</strong></summary>
+
+<br>
+
+Python is a programming language commonly used for backend development, automation, scripting, APIs, testing, and other development tasks.
+
+It provides a general-purpose runtime for executing Python scripts and applications, while supporting isolated project dependencies through virtual environments.
+
+This setup guide installs Python, pip, virtual environment support, and the system-level development packages commonly required for Python development.
+
+📌 [Go to Guide](./python/install-python.md)
+
+</details>
+
+<details>
+<summary><strong>3. Install JavaScript</strong></summary>
+
+<br>
+
+JavaScript is a programming language used for frontend applications, development tools, and server-side applications. Node.js provides the runtime needed to execute JavaScript outside of a web browser.
+
+Node Version Manager (NVM) allows multiple Node.js versions to be installed and switched as needed, making it easier to work with projects that require different Node.js versions.
+
+This setup guide installs NVM, uses it to install the current LTS version of Node.js and npm, and verifies that the environment is ready for JavaScript development.
+
+📌 [Go to Guide](./javascript/install-javascript.md)
 
 </details>
