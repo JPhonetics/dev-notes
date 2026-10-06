@@ -59,7 +59,7 @@ This setup guide updates Ubuntu, removes packages that are no longer required, a
 </details>
 
 <details>
-<summary><strong>3. Install Python</strong></summary>
+<summary><strong>4. Install Python</strong></summary>
 
 <br>
 
@@ -74,7 +74,7 @@ This setup guide installs Python, pip, virtual environment support, and the syst
 </details>
 
 <details>
-<summary><strong>3. Install JavaScript</strong></summary>
+<summary><strong>5. Install JavaScript</strong></summary>
 
 <br>
 
@@ -85,5 +85,35 @@ Node Version Manager (NVM) allows multiple Node.js versions to be installed and 
 This setup guide installs NVM, uses it to install the current LTS version of Node.js and npm, and verifies that the environment is ready for JavaScript development.
 
 📌 [Go to Guide](./javascript/install-javascript.md)
+
+</details>
+
+<details>
+<summary><strong>6. Install Git</strong></summary>
+
+<br>
+
+Git is a distributed version control system used to track changes to source code and maintain a history of a project over time.
+
+It is a core development tool for managing changes, working with branches, restoring earlier versions, and collaborating through platforms such as GitHub.
+
+This setup guide installs Git, configures the default branch and author identity, sets Visual Studio Code as the default Git editor, and verifies the global configuration.
+
+📌 [Go to Guide](./git/install-git.md)
+
+</details>
+
+<details>
+<summary><strong>7. Install GitHub</strong></summary>
+
+<br>
+
+GitHub is a cloud-based platform used to host Git repositories and provide collaboration features such as pull requests, issues, releases, code reviews, and automated workflows.
+
+GitHub CLI (`gh`) provides command-line access to GitHub, making it possible to authenticate, create and clone repositories, and manage GitHub resources directly from the terminal.
+
+This setup guide installs GitHub CLI, connects it to a GitHub account, configures Git authentication over HTTPS, and verifies that the connection is working correctly.
+
+📌 [Go to Guide](./git/install-github-cli.md)
 
 </details>
