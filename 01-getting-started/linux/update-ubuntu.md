@@ -51,7 +51,9 @@ sudo apt install curl nano unzip -y
 
 > [!NOTE]
 > - `curl` is a command-line tool used to transfer data to and from URLs. It is commonly used to download installation scripts, interact with APIs, test web endpoints, and retrieve files from the command line.
+>
 > - `nano` is a simple terminal-based text editor used to create and modify files directly from the command line. It is especially useful for quickly editing configuration files, scripts, and other text files without opening a graphical editor.
+>
 > - `unzip` is a command-line utility used to extract files from ZIP archives. It is commonly used when development tools, source code, installers, or other resources are distributed as compressed ZIP files.
 
 ## Related Documentation

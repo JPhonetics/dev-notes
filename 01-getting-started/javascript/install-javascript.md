@@ -51,6 +51,7 @@ nvm current
 
 > [!NOTE]
 > Check Node.js versions available to install:
+>
 > ```bash
 > nvm ls-remote
 > ```

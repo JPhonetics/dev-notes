@@ -32,8 +32,8 @@ sudo apt install python3 python3-pip python3-venv python3-dev build-essential py
 > - `python3` is the Python 3 interpreter used to execute Python scripts and applications from the command line. It provides the core runtime needed for Python development.
 > - `python3-pip` installs pip, Python's package installer. It is commonly used to install third-party libraries, frameworks, development tools, and project dependencies that are not included with Python itself.
 > - `python3-venv` adds support for creating virtual environments. Virtual environments are commonly used to isolate a project's Python packages and dependency versions from the system Python environment and from other projects.
-> - `python3-dev` installs Python development headers and supporting files used when Python packages need to compile native extensions.
-> - `build-essential` installs common compiler and build tools such as GCC, G++, and `make`. These tools are commonly used when Python packages or other development software need to compile native code during installation.
+> - `python3-dev` installs Python development headers and supporting files used when Python packages need to compile native extensions. It is commonly required by packages that include C or C++ components.
+> - `build-essential` installs common compiler and build tools such as `GCC`, `G++`, and `make`. These tools are commonly used when Python packages or other development software need to compile native code during installation.
 > - `python-is-python3` allows the `python` command to invoke Python 3. This provides the shorter `python` command while still using the installed Python 3 interpreter.
 
 ## Verify Installation
