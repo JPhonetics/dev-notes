@@ -79,19 +79,19 @@ nvm current
 
 ## Verify Installation
 
-1. Verify Node Version Manager.
+1. Check the installed version of Node Version Manager.
 
 ```bash
 nvm --version
 ```
 
-2. Verify Node.js.
+2. Check the installed version of Node.js.
 
 ```bash
 node --version
 ```
 
-3. Verify Node Package Manager.
+3. Check the installed version of Node Package Manager.
 
 ```bash
 npm --version

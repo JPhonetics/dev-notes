@@ -24,30 +24,34 @@ This guide installs Git, configures the default branch name and user identity, s
 1. Open **Windows Terminal**.
 2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
 3. Install Git.
+   - `sudo` executes the command with administrative privileges.
+   - `apt install git -y` installs Git through Ubuntu's package manager. The `-y` option automatically confirms the installation.
 
 ```bash
 sudo apt install git -y
 ```
 
 4. Set the default branch name to `main`. This ensures repositories created with `git init` use `main` as the initial branch, matching the naming convention commonly used by GitHub and many modern projects.
+   - `git config` reads or modifies Git configuration settings.
+   - `--global` applies the setting to the current user's Git configuration, making it the default across repositories.
+   - `init.defaultBranch main` sets `main` as the initial branch name for new repositories created with `git init`.
 
 ```bash
 git config --global init.defaultBranch main
 ```
 
-5. Set the default Git author name. This name is recorded with each commit you create.
+5. Configure your default Git author name and email. These details are recorded with each commit you create and can be used by GitHub to associate commits with your account.
+   - `user.name` defines the name Git associates with your commits. It does not have to match your GitHub username.
+   - `user.email` defines the email Git associates with your commits. To associate commits with your GitHub account, use an email address linked to that account or your GitHub-provided `noreply` email address.
 
 ```bash
 git config --global user.name "<YOUR_NAME>"
-```
-
-6. Set the default Git author email. This email is recorded with each commit and can be used by GitHub to associate commits with your account.
-
-```bash
 git config --global user.email "<YOUR_EMAIL>"
 ```
 
-7. Set **Visual Studio Code (VS Code)** as Git's default text editor. The `code` command becomes available after VS Code is installed and WSL integration is configured.
+6. Set **Visual Studio Code (VS Code)** as Git's default text editor. The `code` command becomes available after VS Code is installed and WSL integration is configured.
+   - `core.editor` specifies the editor Git uses when it needs you to enter or modify text, such as a commit message.
+   - `code` launches Visual Studio Code from the terminal.
 
 ```bash
 git config --global core.editor code
@@ -56,8 +60,10 @@ git config --global core.editor code
 <br>
 
 > [!NOTE]
-> Global Git settings are used by default across repositories, but the author name and email can be overridden for an individual repository. Execute these commands from inside the project folder that contains `.git`.
+> Global Git settings apply by default to all repositories for the current user. However, individual repositories can have their own settings that override the global configuration. When `--global` is omitted, `git config` saves the specified settings to the current repository's `.git/config` file, provided the command is executed inside a Git repository.
 >
+> To override the default author name and email for a specific repository, execute these commands from inside that repository's project directory:
+> 
 > ```bash
 > git config user.name "<YOUR_NAME>"
 > git config user.email "<YOUR_EMAIL>"
@@ -78,7 +84,7 @@ git config --global core.editor code
 
 ## Verify Installation
 
-1. Verify Git.
+1. Check the installed version of Git.
 
 ```bash
 git --version

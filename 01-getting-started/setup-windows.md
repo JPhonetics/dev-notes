@@ -189,22 +189,26 @@ This section includes development tools that can be useful in specific workflows
 
 <br>
 
-Claude Code is an AI-assisted development tool that can work directly with a codebase from the terminal to help explain, modify, debug, and navigate projects.
+Claude Code is an AI-assisted development tool by Anthropic that runs from the terminal and can work directly with a project's files, source code, and development environment.
 
-This optional guide links to the official Claude Code installation documentation and provides a place to document any local setup or configuration used in this development environment.
+It is useful for understanding and modifying code, debugging issues, navigating larger codebases, and carrying out multi-step development tasks while working directly inside a project directory.
+
+This optional guide installs Claude Code inside the Ubuntu WSL environment, configures access through `PATH` if needed, connects it to a Claude account, and verifies that the installation is working correctly.
 
 📌 [Go to Guide](./ai/install-claude.md)
 
 </details>
 
 <details>
-<summary><strong>Install Codex</strong></summary>
+<summary><strong>Install Codex CLI</strong></summary>
 
 <br>
 
-Codex is an AI-assisted development tool that can work with source code, terminal commands, project files, and development workflows to help build, modify, debug, and understand software projects.
+Codex CLI is an AI-assisted development tool by OpenAI that runs from the terminal and can work directly with a project's files, source code, commands, and development environment.
 
-This optional guide links to the official Codex installation documentation and provides a place to document any local setup or configuration used in this development environment.
+It is useful for explaining and modifying code, debugging issues, navigating projects, and carrying out multi-step development tasks while working directly inside a project directory.
+
+This optional guide installs Codex CLI inside the Ubuntu WSL environment, connects it to a ChatGPT account, and verifies that the installation is working correctly.
 
 📌 [Go to Guide](./ai/install-codex.md)
 

@@ -14,7 +14,8 @@ This guide installs GitHub CLI, connects it to a GitHub account, configures Git 
 ## Overview
 
 1. [Install GitHub CLI](#install-github-cli)
-2. [Verify Installation](#verify-installation)
+2. [Log into GitHub](#log-into-github)
+3. [Verify Installation](#verify-installation)
 
 ## Install GitHub CLI
 
@@ -24,18 +25,24 @@ This guide installs GitHub CLI, connects it to a GitHub account, configures Git 
 1. Open **Windows Terminal**.
 2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
 3. Install GitHub CLI.
+   - `sudo` executes the command with administrative privileges.
+   - `apt install gh -y` installs GitHub CLI through Ubuntu's package manager. The `-y` option automatically confirms the installation.
 
 ```bash
 sudo apt install gh -y
 ```
 
-4. Authenticate GitHub CLI with your GitHub account.
+## Log into GitHub
+
+1. Authenticate GitHub CLI with your GitHub account.
+   - `gh` is the command-line interface used to interact with GitHub.
+   - `auth login` begins the interactive authentication process, allowing GitHub CLI to connect to your account.
 
 ```bash
 gh auth login
 ```
 
-5. Follow the prompts:
+2. Follow the prompts:
    1. **What account do you want to log into?** 
       - GitHub.com
    2. **What is your preferred protocol for Git operations on this host?** 
@@ -51,17 +58,24 @@ gh auth login
    9. Enter the one-time code.
    10. Click **Continue**.
    11. Click **Authorize GitHub**.
-6. Confirm authentication completed successfully in **Windows Terminal**.
+3. Confirm authentication completed successfully in **Windows Terminal**.
+
+> [!NOTE]
+> To log out of **GitHub CLI**:
+>
+> ```bash
+> gh auth logout
+> ```
 
 ## Verify Installation
 
-1. Verify GitHub CLI.
+1. Check the installed version of GitHub CLI.
 
 ```bash
 gh --version
 ```
 
-2. Verify GitHub authentication.
+2. Verify GitHub authentication status.
 
 ```bash
 gh auth status
