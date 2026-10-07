@@ -86,6 +86,11 @@ git --version
 git config --global -l
 ```
 
+## Official Documentation
+
+- [Git Documentation](https://git-scm.com/docs)
+- [Git Book](https://git-scm.com/book/en/v2)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)

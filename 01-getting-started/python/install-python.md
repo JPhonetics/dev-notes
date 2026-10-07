@@ -56,6 +56,12 @@ python3 --version
 pip --version
 ```
 
+## Official Documentation
+
+- [Python Documentation](https://docs.python.org/3/)
+- [pip Documentation](https://pip.pypa.io/en/stable/)
+- [Python Virtual Environments](https://docs.python.org/3/library/venv.html)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)

@@ -63,6 +63,11 @@ gh --version
 gh auth status
 ```
 
+## Official Documentation
+
+- [GitHub CLI Documentation](https://cli.github.com/manual/)
+- [GitHub Documentation](https://docs.github.com/)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)

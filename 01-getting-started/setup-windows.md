@@ -119,7 +119,18 @@ This setup guide installs GitHub CLI, connects it to a GitHub account, configure
 </details>
 
 <details>
-<summary><strong>8. Install Visual Studio Code (Text Editor)</strong></summary>
+<summary><strong>8. Install Docker</strong></summary>
+
+<br>
+
+dsda
+
+📌 [Go to Guide](./docker/install-docker.md)
+
+</details>
+
+<details>
+<summary><strong>9. Install Visual Studio Code (Text Editor)</strong></summary>
 
 <br>
 
@@ -136,7 +147,7 @@ This setup guide installs VS Code, configures it for use with WSL, and provides 
 </details>
 
 <details>
-<summary><strong>9. Install DBeaver (SQL Client)</strong></summary>
+<summary><strong>10. Install DBeaver (SQL Client)</strong></summary>
 
 <br>
 
@@ -150,6 +161,43 @@ This setup guide installs DBeaver on Windows and prepares it for use as the prim
 
 </details>
 
+<details>
+<summary><strong>12. Install Postman (API Client)</strong></summary>
+
+<br>
+
+dsda
+
+📌 [Go to Guide](./api/install-postman.md)
+
+</details>
+
 ## Optional Additions
 
 This section includes development tools that can be useful in specific workflows but are not required for the base development environment. Install them as needed based on the requirements of individual projects or development tasks.
+
+<details>
+<summary><strong>Install Claude Code</strong></summary>
+
+<br>
+
+Claude Code is an AI-assisted development tool that can work directly with a codebase from the terminal to help explain, modify, debug, and navigate projects.
+
+This optional guide links to the official Claude Code installation documentation and provides a place to document any local setup or configuration used in this development environment.
+
+📌 [Go to Guide](./ai/install-claude.md)
+
+</details>
+
+<details>
+<summary><strong>Install Codex</strong></summary>
+
+<br>
+
+Codex is an AI-assisted development tool that can work with source code, terminal commands, project files, and development workflows to help build, modify, debug, and understand software projects.
+
+This optional guide links to the official Codex installation documentation and provides a place to document any local setup or configuration used in this development environment.
+
+📌 [Go to Guide](./ai/install-codex.md)
+
+</details>

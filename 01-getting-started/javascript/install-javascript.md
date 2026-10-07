@@ -94,6 +94,12 @@ node --version
 npm --version
 ```
 
+## Official Documentation
+
+- [Node.js Documentation](https://nodejs.org/docs/latest/api/)
+- [npm Documentation](https://docs.npmjs.com/)
+- [NVM Documentation](https://github.com/nvm-sh/nvm)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)

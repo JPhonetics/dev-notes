@@ -84,6 +84,12 @@ VS Code extensions add language support, debugging tools, linters, formatters, f
 >
 > 📌 [VS Code Extensions](./vscode-extensions.md)
 
+## Official Documentation
+
+- [Visual Studio Code Documentation](https://code.visualstudio.com/docs)
+- [VS Code WSL Documentation](https://code.visualstudio.com/docs/remote/wsl)
+- [VS Code Extensions Documentation](https://code.visualstudio.com/docs/editor/extension-marketplace)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)

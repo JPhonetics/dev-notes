@@ -35,6 +35,10 @@ This guide installs DBeaver on Windows and prepares it for connecting to databas
 > [!NOTE]
 > When connecting to a database engine for the first time, DBeaver may prompt you to download the required database-specific JDBC driver. The driver allows DBeaver to communicate with that database system.
 
+## Official Documentation
+
+- [DBeaver Documentation](https://dbeaver.com/docs/dbeaver/)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)

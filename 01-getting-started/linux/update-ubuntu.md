@@ -56,6 +56,11 @@ sudo apt install curl nano unzip -y
 >
 > - `unzip` is a command-line utility used to extract files from ZIP archives. It is commonly used when development tools, source code, installers, or other resources are distributed as compressed ZIP files.
 
+## Official Documentation
+
+- [Ubuntu Documentation](https://documentation.ubuntu.com/)
+- [APT Documentation](https://manpages.ubuntu.com/manpages/noble/en/man8/apt.8.html)
+
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)
