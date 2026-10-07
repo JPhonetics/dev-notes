@@ -1,6 +1,6 @@
 ---
 Created: 2026-10-05
-Modified: 
+Modified:
 ---
 
 # Setup Windows for Development
@@ -123,7 +123,11 @@ This setup guide installs GitHub CLI, connects it to a GitHub account, configure
 
 <br>
 
-dsda
+Docker is a container platform used to package applications and their dependencies into isolated, portable environments called containers.
+
+It is useful for development because containers can provide consistent application environments, isolate project dependencies, and run supporting services such as databases or web servers without permanently installing them on the host system.
+
+This setup guide installs Docker Engine and Docker Compose inside the Ubuntu WSL environment, configures Docker's official APT repository, and verifies that containers can run successfully.
 
 📌 [Go to Guide](./docker/install-docker.md)
 
@@ -166,7 +170,11 @@ This setup guide installs DBeaver on Windows and prepares it for use as the prim
 
 <br>
 
-dsda
+Postman is an API development and testing application used to send HTTP requests, inspect responses, manage authentication, organize request collections, and work with APIs from a graphical interface.
+
+It is useful for developing and debugging APIs because requests, headers, parameters, request bodies, authentication settings, and environments can be saved and reused instead of being recreated manually.
+
+This setup guide installs Postman on Windows and explains the optional account sign-in and the additional features it enables.
 
 📌 [Go to Guide](./api/install-postman.md)
 

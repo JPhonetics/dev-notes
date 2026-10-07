@@ -18,20 +18,24 @@ This guide installs GitHub CLI, connects it to a GitHub account, configures Git 
 
 ## Install GitHub CLI
 
+> [!IMPORTANT]
+> All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
+
 1. Open **Windows Terminal**.
-2. Install GitHub CLI.
+2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
+3. Install GitHub CLI.
 
 ```bash
 sudo apt install gh -y
 ```
 
-3. Authenticate GitHub CLI with your GitHub account.
+4. Authenticate GitHub CLI with your GitHub account.
 
 ```bash
 gh auth login
 ```
 
-4. Follow the prompts:
+5. Follow the prompts:
    1. **What account do you want to log into?** 
       - GitHub.com
    2. **What is your preferred protocol for Git operations on this host?** 
@@ -47,7 +51,7 @@ gh auth login
    9. Enter the one-time code.
    10. Click **Continue**.
    11. Click **Authorize GitHub**.
-5. Confirm authentication completed successfully in **Windows Terminal**.
+6. Confirm authentication completed successfully in **Windows Terminal**.
 
 ## Verify Installation
 
@@ -63,11 +67,11 @@ gh --version
 gh auth status
 ```
 
+## Related Documentation
+
+- [Windows Development Setup](../setup-windows.md)
+
 ## Official Documentation
 
 - [GitHub CLI Documentation](https://cli.github.com/manual/)
 - [GitHub Documentation](https://docs.github.com/)
-
-## Related Documentation
-
-- [Windows Development Setup](../setup-windows.md)

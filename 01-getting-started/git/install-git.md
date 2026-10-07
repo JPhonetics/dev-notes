@@ -18,32 +18,36 @@ This guide installs Git, configures the default branch name and user identity, s
 
 ## Install Git
 
+> [!IMPORTANT]
+> All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
+
 1. Open **Windows Terminal**.
-2. Install Git.
+2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
+3. Install Git.
 
 ```bash
 sudo apt install git -y
 ```
 
-3. Set the default branch name to `main`. This ensures repositories created with `git init` use `main` as the initial branch, matching the naming convention commonly used by GitHub and many modern projects.
+4. Set the default branch name to `main`. This ensures repositories created with `git init` use `main` as the initial branch, matching the naming convention commonly used by GitHub and many modern projects.
 
 ```bash
 git config --global init.defaultBranch main
 ```
 
-4. Set the default Git author name. This name is recorded with each commit you create.
+5. Set the default Git author name. This name is recorded with each commit you create.
 
 ```bash
 git config --global user.name "<YOUR_NAME>"
 ```
 
-5. Set the default Git author email. This email is recorded with each commit and can be used by GitHub to associate commits with your account.
+6. Set the default Git author email. This email is recorded with each commit and can be used by GitHub to associate commits with your account.
 
 ```bash
 git config --global user.email "<YOUR_EMAIL>"
 ```
 
-6. Set **Visual Studio Code (VS Code)** as Git's default text editor. The `code` command becomes available after VS Code is installed and WSL integration is configured.
+7. Set **Visual Studio Code (VS Code)** as Git's default text editor. The `code` command becomes available after VS Code is installed and WSL integration is configured.
 
 ```bash
 git config --global core.editor code
@@ -86,11 +90,11 @@ git --version
 git config --global -l
 ```
 
+## Related Documentation
+
+- [Windows Development Setup](../setup-windows.md)
+
 ## Official Documentation
 
 - [Git Documentation](https://git-scm.com/docs)
 - [Git Book](https://git-scm.com/book/en/v2)
-
-## Related Documentation
-
-- [Windows Development Setup](../setup-windows.md)

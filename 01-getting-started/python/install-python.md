@@ -20,9 +20,12 @@ This guide installs Python, pip, virtual environment support, and system-level d
 
 Python provides the runtime used to execute Python scripts and applications, while pip (Pip Installs Packages) manages third-party packages and project dependencies. Virtual environment support is installed so isolated environments can be created later when working on individual projects.
 
-1. Open **Windows Terminal**.
+> [!IMPORTANT]
+> All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
 
-2. Install Python and the supporting packages.
+1. Open **Windows Terminal**.
+2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
+3. Install Python and the supporting packages.
 
 ```bash
 sudo apt install python3 python3-pip python3-venv python3-dev build-essential python-is-python3 -y
@@ -56,12 +59,12 @@ python3 --version
 pip --version
 ```
 
+## Related Documentation
+
+- [Windows Development Setup](../setup-windows.md)
+
 ## Official Documentation
 
 - [Python Documentation](https://docs.python.org/3/)
 - [pip Documentation](https://pip.pypa.io/en/stable/)
 - [Python Virtual Environments](https://docs.python.org/3/library/venv.html)
-
-## Related Documentation
-
-- [Windows Development Setup](../setup-windows.md)

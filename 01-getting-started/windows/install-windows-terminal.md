@@ -54,10 +54,10 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 > [!TIP]
 > Use the preview pane to test changes before saving.
 
-## Official Documentation
-
-- [Windows Terminal Documentation](https://learn.microsoft.com/windows/terminal/)
-
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)
+
+## Official Documentation
+
+- [Windows Terminal Documentation](https://learn.microsoft.com/windows/terminal/)

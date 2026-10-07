@@ -80,10 +80,10 @@ wsl --list --verbose
 * Ubuntu    Running         2
 ```
 
-## Official Documentation
-
-- [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/windows/wsl/)
-
 ## Related Documentation
 
 - [Windows Development Setup](../setup-windows.md)
+
+## Official Documentation
+
+- [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/windows/wsl/)

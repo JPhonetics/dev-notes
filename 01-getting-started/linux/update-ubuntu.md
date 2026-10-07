@@ -19,23 +19,26 @@ This guide updates Ubuntu's package lists, installs available package updates, r
 ## Update Ubuntu
 
 > [!IMPORTANT]
+> All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
+
+> [!NOTE]
 > The `-y` option automatically answers **yes** to package confirmation prompts. This applies to both `apt upgrade -y` and `apt autoremove -y`. Remove `-y` if you want to review and manually confirm the changes before they are applied.
 
 1. Open **Windows Terminal**.
-
-2. Refresh Ubuntu's package index. `apt update` refreshes Ubuntu's package index by checking the configured repositories for currently available package versions. It does not install any updates.
+2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
+3. Refresh Ubuntu's package index. `apt update` refreshes Ubuntu's package index by checking the configured repositories for currently available package versions. It does not install any updates.
 
 ```bash
 sudo apt update
 ```
 
-3. Install available package upgrades. `apt upgrade` uses the refreshed package information to install newer versions of packages already installed on the system, as long as the upgrade does not require removing installed packages.
+4. Install available package upgrades. `apt upgrade` uses the refreshed package information to install newer versions of packages already installed on the system, as long as the upgrade does not require removing installed packages.
 
 ```bash
 sudo apt upgrade -y
 ```
 
-4. Remove packages that are no longer required. `apt autoremove` removes dependency packages that were installed automatically, but are no longer required by any installed software.
+5. Remove packages that are no longer required. `apt autoremove` removes dependency packages that were installed automatically, but are no longer required by any installed software.
 
 ```bash
 sudo apt autoremove -y
@@ -56,11 +59,11 @@ sudo apt install curl nano unzip -y
 >
 > - `unzip` is a command-line utility used to extract files from ZIP archives. It is commonly used when development tools, source code, installers, or other resources are distributed as compressed ZIP files.
 
+## Related Documentation
+
+- [Windows Development Setup](../setup-windows.md)
+
 ## Official Documentation
 
 - [Ubuntu Documentation](https://documentation.ubuntu.com/)
 - [APT Documentation](https://manpages.ubuntu.com/manpages/noble/en/man8/apt.8.html)
-
-## Related Documentation
-
-- [Windows Development Setup](../setup-windows.md)

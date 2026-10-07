@@ -21,15 +21,18 @@ This guide installs Node Version Manager (NVM), uses NVM to install the current 
 
 NVM is a version manager for Node.js. It allows multiple versions of Node.js to be installed for the current Linux user and makes it possible to switch between them as needed. This is useful when working on different projects that require different versions of Node.js.
 
-1. Open **Windows Terminal**.
+> [!IMPORTANT]
+> All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
 
-2. Download and install NVM. The NVM installation script installs NVM for the current Linux user and updates the shell configuration so that the `nvm` command is available in future terminal sessions.
+1. Open **Windows Terminal**.
+2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
+3. Download and install NVM. The NVM installation script installs NVM for the current Linux user and updates the shell configuration so that the `nvm` command is available in future terminal sessions.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
 ```
 
-3. Close and reopen **Windows Terminal** to load NVM into the new shell session.
+4. Close and reopen **Windows Terminal** to load NVM into the new shell session.
 
 ## Install Node.js
 
@@ -94,12 +97,12 @@ node --version
 npm --version
 ```
 
+## Related Documentation
+
+- [Windows Development Setup](../setup-windows.md)
+
 ## Official Documentation
 
 - [Node.js Documentation](https://nodejs.org/docs/latest/api/)
 - [npm Documentation](https://docs.npmjs.com/)
 - [NVM Documentation](https://github.com/nvm-sh/nvm)
-
-## Related Documentation
-
-- [Windows Development Setup](../setup-windows.md)
