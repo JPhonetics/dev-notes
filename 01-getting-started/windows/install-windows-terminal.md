@@ -31,7 +31,7 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 1. Open **Windows Terminal**.
 2. Click the `⌵` menu in the title bar.
 3. Select **Settings**.
-4. Select **Ubuntu** under **Startup** > **Default profile**.
+4. Select **Ubuntu** under **Startup > Default profile**.
 5. Click **Save**.
 
 ## Configure Appearance

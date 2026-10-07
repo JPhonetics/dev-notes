@@ -31,22 +31,23 @@ sudo apt install gh -y
 gh auth login
 ```
 
-4. **What account do you want to log into?** 
-   - GitHub.com
-5. **What is your preferred protocol for Git operations on this host?** 
-   - HTTPS
-6. **Authenticate Git with your GitHub credentials?**
-   - Yes
-7. **How would you like to authenticate GitHub CLI?**
-   - Login with a web browser
-8. Copy the one-time code.
-9. Press **Enter** to open [GitHub](https://github.com/login/device) in your browser.
-10. Log into GitHub if prompted, or create an account.
-11. Click **Continue**.
-12. Enter the one-time code.
-13. Click **Continue**.
-14. Click **Authorize GitHub**.
-15. Confirm authentication completed successfully in **Windows Terminal**.
+4. Follow the prompts:
+   1. **What account do you want to log into?** 
+      - GitHub.com
+   2. **What is your preferred protocol for Git operations on this host?** 
+      - HTTPS
+   3. **Authenticate Git with your GitHub credentials?**
+      - Yes
+   4. **How would you like to authenticate GitHub CLI?**
+      - Login with a web browser
+   5. Copy the one-time code.
+   6. Press **Enter** to open [GitHub](https://github.com/login/device) in your browser.
+   7. Log into **GitHub** if prompted, or create an account.
+   8. Click **Continue**.
+   9. Enter the one-time code.
+   10. Click **Continue**.
+   11. Click **Authorize GitHub**.
+5. Confirm authentication completed successfully in **Windows Terminal**.
 
 ## Verify Installation
 

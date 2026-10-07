@@ -52,7 +52,7 @@ Ubuntu provides the Linux environment used for development through WSL and uses 
 
 Keeping Ubuntu current provides an up-to-date foundation for the development tools installed later and helps prevent issues caused by outdated packages or dependencies.
 
-This setup guide updates Ubuntu, removes packages that are no longer required, and installs commonly used command-line utilities for development.
+This setup guide updates Ubuntu's package lists and installed packages, removes packages that are no longer required, and installs commonly used command-line utilities for development.
 
 📌 [Go to Guide](./linux/update-ubuntu.md)
 
@@ -82,7 +82,7 @@ JavaScript is a programming language used for frontend applications, development
 
 Node Version Manager (NVM) allows multiple Node.js versions to be installed and switched as needed, making it easier to work with projects that require different Node.js versions.
 
-This setup guide installs NVM, uses it to install the current LTS version of Node.js and npm, and verifies that the environment is ready for JavaScript development.
+This setup guide installs NVM, uses it to install the current LTS version of Node.js, and verifies that Node.js and npm are ready for JavaScript development.
 
 📌 [Go to Guide](./javascript/install-javascript.md)
 
@@ -97,14 +97,14 @@ Git is a distributed version control system used to track changes to source code
 
 It is a core development tool for managing changes, working with branches, restoring earlier versions, and collaborating through platforms such as GitHub.
 
-This setup guide installs Git, configures the default branch and author identity, sets Visual Studio Code as the default Git editor, and verifies the global configuration.
+This setup guide installs Git, configures the default branch and author identity, sets Visual Studio Code as the default Git text editor, and verifies the global configuration.
 
 📌 [Go to Guide](./git/install-git.md)
 
 </details>
 
 <details>
-<summary><strong>7. Install GitHub</strong></summary>
+<summary><strong>7. Install GitHub CLI</strong></summary>
 
 <br>
 
@@ -114,6 +114,42 @@ GitHub CLI (`gh`) provides command-line access to GitHub, making it possible to 
 
 This setup guide installs GitHub CLI, connects it to a GitHub account, configures Git authentication over HTTPS, and verifies that the connection is working correctly.
 
-📌 [Go to Guide](./git/install-github-cli.md)
+📌 [Go to Guide](./github/install-github-cli.md)
 
 </details>
+
+<details>
+<summary><strong>8. Install Visual Studio Code (Text Editor)</strong></summary>
+
+<br>
+
+Visual Studio Code (VS Code) is a lightweight source code editor used for writing, navigating, debugging, and managing code across many programming languages and frameworks.
+
+It integrates closely with WSL, allowing projects stored in Ubuntu to be edited through the Windows application while development tools, runtimes, and commands continue to run inside the Linux environment. Extensions can also add language support, formatting, debugging, container tooling, and other development features as needed.
+
+This setup guide installs VS Code, configures it for use with WSL, and provides the recommended extensions used throughout the development environment.
+
+📌 [Go to Guide](./vscode/install-vscode.md)
+
+🧩 [Recommended VS Code Extensions](./vscode/vscode-extensions.md)
+
+</details>
+
+<details>
+<summary><strong>9. Install DBeaver (SQL Client)</strong></summary>
+
+<br>
+
+DBeaver is a graphical database management application that provides a single interface for working with database systems such as PostgreSQL, MySQL, MariaDB, SQLite, and SQL Server.
+
+It is used to explore schemas, view and modify data, execute SQL queries, and connect to databases running locally, remotely, or inside Docker containers.
+
+This setup guide installs DBeaver on Windows and prepares it for use as the primary graphical database client for development.
+
+📌 [Go to Guide](./sql/install-dbeaver.md)
+
+</details>
+
+## Optional Additions
+
+This section includes development tools that can be useful in specific workflows but are not required for the base development environment. Install them as needed based on the requirements of individual projects or development tasks.
