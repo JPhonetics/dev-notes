@@ -7,7 +7,7 @@ Modified:
 
 This guide builds a complete Windows development environment that combines native Windows applications with a Linux development environment through Windows Subsystem for Linux (WSL). Windows remains the primary operating system, while Ubuntu provides access to Linux command-line tools, package managers, development frameworks, databases, containers, and other tools commonly used in modern software development.
 
-This setup provides the flexibility of working across both Windows and Linux without maintaining a separate Linux machine or dual-boot configuration. Windows applications such as Visual Studio Code, Docker Desktop, browsers, and other desktop tools can be used alongside Linux-based development workflows running through WSL.
+This setup provides the flexibility of working across both Windows and Linux without maintaining a separate Linux machine or dual-boot configuration. Windows applications such as Visual Studio Code, web browsers, and other desktop tools can be used alongside Linux-based development workflows running through WSL, including Docker Engine and supporting development services.
 
 This guide provides the recommended installation and configuration order for the development environment. Each major component is documented in its own setup guide, while this page serves as the main roadmap for assembling the complete environment.
 
@@ -166,7 +166,7 @@ This setup guide installs DBeaver on Windows and prepares it for use as the prim
 </details>
 
 <details>
-<summary><strong>12. Install Postman (API Client)</strong></summary>
+<summary><strong>11. Install Postman (API Client)</strong></summary>
 
 <br>
 
@@ -191,9 +191,9 @@ This section includes development tools that can be useful in specific workflows
 
 Claude Code is an AI-assisted development tool by Anthropic that runs from the terminal and can work directly with a project's files, source code, and development environment.
 
-It is useful for understanding and modifying code, debugging issues, navigating larger codebases, and carrying out multi-step development tasks while working directly inside a project directory.
+It is useful for understanding and modifying code, debugging issues, navigating codebases, and carrying out multi-step development tasks directly within a project directory.
 
-This optional guide installs Claude Code inside the Ubuntu WSL environment, configures access through `PATH` if needed, connects it to a Claude account, and verifies that the installation is working correctly.
+This optional guide installs Claude Code inside the Ubuntu WSL environment, verifies that its installation directory is available through `PATH`, connects it to a Claude subscription, and verifies that the installation is working correctly.
 
 📌 [Go to Guide](./ai/install-claude.md)
 
@@ -204,9 +204,9 @@ This optional guide installs Claude Code inside the Ubuntu WSL environment, conf
 
 <br>
 
-Codex CLI is an AI-assisted development tool by OpenAI that runs from the terminal and can work directly with a project's files, source code, commands, and development environment.
+Codex CLI is an AI-assisted development tool by OpenAI that runs from the terminal and can work directly with a project's files, source code, and development environment.
 
-It is useful for explaining and modifying code, debugging issues, navigating projects, and carrying out multi-step development tasks while working directly inside a project directory.
+It is useful for understanding and modifying code, debugging issues, navigating codebases, and carrying out multi-step development tasks directly within a project directory.
 
 This optional guide installs Codex CLI inside the Ubuntu WSL environment, connects it to a ChatGPT account, and verifies that the installation is working correctly.
 
