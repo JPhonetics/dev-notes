@@ -25,9 +25,10 @@ This guide installs Docker Engine and Docker Compose inside the Ubuntu WSL envir
 1. Open **Windows Terminal**.
 2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
 3. Update Ubuntu’s package lists and install the tools required to securely download packages over HTTPS. Then create the APT keyring directory and add Docker’s official GPG signing key so Ubuntu can verify that Docker packages are authentic.
-   - `sudo` executes the command with administrative privileges.
-   - `apt update` refreshes Ubuntu's list of available packages and versions.
-   - `apt install ca-certificates curl -y` installs trusted certificate support and `curl`, which is used to download Docker's signing key. The `-y` option automatically confirms the installation.
+   - `sudo` (superuser do) executes a command with administrative privileges, which are required to install, update, or remove system packages.
+   - `apt update` refreshes Ubuntu's list of available packages and versions. It does not install any updates.
+   - `apt install` installs the specified software packages and any required dependencies from Ubuntu's configured repositories. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
+   - `ca-certificates` and `curl` are packages available through Ubuntu's package manager. `ca-certificates` installs trusted Certificate Authority (CA) certificates used to verify the identity of servers when establishing secure HTTPS connections, while `curl` is a command-line tool used to transfer data to and from URLs. Together, they support securely downloading Docker's official GPG signing key.
    - `install -m 0755 -d /etc/apt/keyrings` creates the `/etc/apt/keyrings` directory with permissions that allow it to be read and accessed by the system.
    - `curl -fsSL` downloads Docker's GPG signing key over HTTPS. `-f` causes the command to fail when the server returns an HTTP error. `-s` runs `curl` without the normal progress display. `-S` still displays an error message if the command fails. `-L` follows redirects if the download URL redirects elsewhere.
    - `-o /etc/apt/keyrings/docker.asc` saves the downloaded key to `/etc/apt/keyrings/docker.asc`.
@@ -65,7 +66,6 @@ EOF
 ```
 
 5. Update Ubuntu's package lists to include the packages available from Docker's newly added repository.
-   - `apt update` reads all configured APT sources again, including the Docker repository that was just added.
 
 ```bash
 sudo apt update
@@ -77,7 +77,6 @@ sudo apt update
    - `containerd.io` installs the container runtime Docker uses behind the scenes to manage container processes and images.
    - `docker-buildx-plugin` adds Docker Buildx for advanced image-building features.
    - `docker-compose-plugin` adds Docker Compose for defining and managing applications made from multiple containers.
-   - `-y` automatically confirms the package installation.
 
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y

@@ -24,8 +24,9 @@ This guide installs Git, configures the default branch name and user identity, s
 1. Open **Windows Terminal**.
 2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
 3. Install Git.
-   - `sudo` executes the command with administrative privileges.
-   - `apt install git -y` installs Git through Ubuntu's package manager. The `-y` option automatically confirms the installation.
+   - `sudo` (superuser do) executes a command with administrative privileges, which are required to install, update, or remove system packages.
+   - `apt install` installs the specified software packages and any required dependencies from Ubuntu's configured repositories. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
+   - `git` is the name of the package available through Ubuntu's package manager.
 
 ```bash
 sudo apt install git -y

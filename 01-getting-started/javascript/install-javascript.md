@@ -27,6 +27,9 @@ NVM is a version manager for Node.js. It allows multiple versions of Node.js to 
 1. Open **Windows Terminal**.
 2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
 3. Download and install NVM. The NVM installation script installs NVM for the current Linux user and updates the shell configuration so that the `nvm` command is available in future terminal sessions.
+   - `curl -o-` downloads NVM's installation script and sends its contents to standard output instead of saving them to a file. The `-o-` option specifies standard output as the destination, allowing the script to be passed directly to `bash`.
+   - `|` passes the output from the command on its left directly to the command on its right.
+   - `bash` executes the downloaded installation script using Bash.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
@@ -39,12 +42,15 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
 Node.js provides the JavaScript runtime, while npm manages JavaScript packages and project dependencies. Development tools such as Vite use whichever Node.js version is currently active in the terminal.
 
 1. Install the current Long-Term Support (LTS) version of Node.js. LTS releases are maintained for a longer period and are generally the preferred choice for development environments and production applications. npm is installed automatically with Node.js, so a separate `apt install npm` command is not required when Node.js is installed through NVM.
+   - `nvm install` downloads and installs a Node.js version using NVM.
+   - `--lts` selects the latest available Long-Term Support release instead of requiring a specific version number.
 
 ```bash
 nvm install --lts
 ```
 
 2. Confirm the active Node.js version managed by NVM.
+   - `nvm current` displays the Node.js version currently selected in the terminal session.
 
 ```bash
 nvm current
@@ -53,25 +59,26 @@ nvm current
 <br>
 
 > [!NOTE]
-> Check Node.js versions available to install:
+> `nvm ls` lists locally installed Node.js versions and identifies the currently active version.
+>
+> ```bash
+> nvm ls
+> ```
+>
+> `nvm ls-remote` lists Node.js versions available for install from the remote version repository.
 >
 > ```bash
 > nvm ls-remote
 > ```
->
-> Check Node.js versions already installed with NVM:
-> ```bash
-> nvm ls
-> ```
 
 <br>
 
-> [!IMPORTANT]
+> [!NOTE]
 > - NVM does not install Node.js inside individual project directories. Node.js versions are stored in the user's NVM environment, and NVM controls which version is active in the shell.
-> - Use `nvm use <version>` to switch the active Node.js version for the current terminal session. Commands such as `node`, `npm`, and development tools such as Vite will use that active version.
-> - Individual projects can later specify a Node.js version using a `.nvmrc` file. When working inside a project that contains `.nvmrc`, running `nvm use` selects the version specified by that project.
+> - `nvm use <version>` switches the active Node.js version for the current terminal session. Commands such as `node`, `npm`, and development tools such as Vite will use that active version.
+> - Individual projects can specify a Node.js version using a `.nvmrc` file. When working inside a project that contains `.nvmrc`, executing `nvm use` without a version selects the version specified by that project.
 >
-> For example:
+> For example, switch to an already installed Node.js version 22:
 >
 > ```bash
 > nvm use 22

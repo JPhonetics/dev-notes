@@ -21,24 +21,26 @@ This guide updates Ubuntu's package lists, installs available package updates, r
 > [!IMPORTANT]
 > All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
 
-> [!NOTE]
-> The `-y` option automatically answers **yes** to package confirmation prompts. This applies to both `apt upgrade -y` and `apt autoremove -y`. Remove `-y` if you want to review and manually confirm the changes before they are applied.
-
 1. Open **Windows Terminal**.
 2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
-3. Refresh Ubuntu's package index. `apt update` refreshes Ubuntu's package index by checking the configured repositories for currently available package versions. It does not install any updates.
+3. Refresh Ubuntu's package index.
+   - `sudo` (superuser do) executes a command with administrative privileges, which are required to install, update, or remove system packages.
+   - `apt` (Advanced Package Tool) is Ubuntu's package manager, used to install, update, and remove software packages.
+   - `update` tells APT to refresh its package index by checking configured repositories for available package versions. It does not install any updates.
 
 ```bash
 sudo apt update
 ```
 
-4. Install available package upgrades. `apt upgrade` uses the refreshed package information to install newer versions of packages already installed on the system, as long as the upgrade does not require removing installed packages.
+4. Install available package upgrades.
+   - `apt upgrade` uses the refreshed package information to install available upgrades without removing installed packages. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
 
 ```bash
 sudo apt upgrade -y
 ```
 
-5. Remove packages that are no longer required. `apt autoremove` removes dependency packages that were installed automatically, but are no longer required by any installed software.
+5. Remove packages that are no longer required.
+   - `apt autoremove` removes dependency packages that were installed automatically but are no longer required by any installed software. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
 
 ```bash
 sudo apt autoremove -y
@@ -46,18 +48,15 @@ sudo apt autoremove -y
 
 ## Install Additional Packages
 
-Commonly used command-line utilities that support development tools, installation scripts, downloads, and other Linux workflows. Some of these packages may already be installed.
+Install commonly used command-line utilities that support development tools, installation scripts, downloads, and other Linux workflows. Some of these packages may already be installed.
+- `apt install` installs the specified software packages and any required dependencies from Ubuntu's configured repositories. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
+- `curl` is a command-line tool used to transfer data to and from URLs. It is commonly used to download installation scripts, interact with APIs, test web endpoints, and retrieve files from the command line.
+- `nano` is a simple terminal-based text editor used to create and modify files directly from the command line. It is especially useful for quickly editing configuration files, scripts, and other text files without opening a graphical editor.
+- `unzip` is a command-line utility used to extract files from ZIP archives. It is commonly used when development tools, source code, installers, or other resources are distributed as compressed ZIP files.
 
 ```bash
 sudo apt install curl nano unzip -y
 ```
-
-> [!NOTE]
-> - `curl` is a command-line tool used to transfer data to and from URLs. It is commonly used to download installation scripts, interact with APIs, test web endpoints, and retrieve files from the command line.
->
-> - `nano` is a simple terminal-based text editor used to create and modify files directly from the command line. It is especially useful for quickly editing configuration files, scripts, and other text files without opening a graphical editor.
->
-> - `unzip` is a command-line utility used to extract files from ZIP archives. It is commonly used when development tools, source code, installers, or other resources are distributed as compressed ZIP files.
 
 ## Related Documentation
 
