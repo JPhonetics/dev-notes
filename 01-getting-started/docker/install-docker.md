@@ -97,15 +97,17 @@ docker compose version
 ```
 
 3. Verify the Docker service is running. It should start automatically after installation completes.
-   - `systemctl status docker` displays the current state of the Docker background service.
+   - `systemctl` is a command-line tool used to manage and inspect system services controlled by `systemd`, Ubuntu's system and service manager.
+   - `status` displays the current state of a service, including whether it is active, inactive, or failed.
+   - `docker` specifies the Docker service to inspect.
 
 ```bash
 sudo systemctl status docker
 ```
 
 > [!NOTE]
-> If Docker is not running, start it manually:
-> 
+> If Docker is not running, start it manually. The `start` command tells `systemctl` to start the specified service.
+>
 > ```bash
 > sudo systemctl start docker
 > ```
