@@ -5,11 +5,9 @@ Modified:
 
 # Proxmox - PCI Passthrough to LXC
 
-This guide documents the steps to expose a PCI or PCIe device to a Linux Container (LXC) in Proxmox. Because an LXC shares the Proxmox host's Linux kernel, the hardware's kernel driver must be available on the Proxmox host. The host driver creates the device interface that is then exposed to the LXC. The container installs any required user-space runtime, libraries, or applications. Drivers allow the host machine to communicate with the device.
+This guide documents the steps to expose a PCI or PCIe device to a Linux Container (LXC) in Proxmox. Because an LXC shares the Proxmox host's Linux kernel, the hardware's kernel driver must be available on the Proxmox host. The host driver provides the device interface that is then exposed to the LXC. The container installs any required user-space runtime, libraries, or applications.
 
 See [Device-Specific Installation](#device-specific-installation) for device-specific driver installation instructions. These guides contain only the steps unique to that device. Return to this guide afterward to complete the LXC passthrough process.
-
-This is a rough guide. It will be refined later.
 
 ## Overview
 
