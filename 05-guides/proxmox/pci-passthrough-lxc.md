@@ -132,6 +132,9 @@ ls -l /lib/modules/$(uname -r)/build
 
 ## Install the PCI Device Driver
 
+> [!CAUTION]
+> Before installing the latest driver, review the hardware vendor's documentation and the requirements of any applications that will use the device. Some applications support only specific driver versions.
+
 If no kernel driver is currently bound to the PCI device, install the driver using the hardware vendor's supported method.
 
 The installation method depends on how the driver is distributed:

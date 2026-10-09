@@ -7,6 +7,11 @@ Modified:
 
 Use Hailo's official HailoRT installation documentation and the prebuilt `.deb` package provided through the Hailo Developer Zone. This guide uses HailoRT PCIe driver version `4.24.0` with the Hailo-8.
 
+> [!WARNING]
+> This guide installs HailoRT PCIe driver version `4.24.0`. Before installing it, review the requirements of the application that will use the Hailo-8. In this setup, the Hailo-8 is passed through to a Frigate LXC, and Frigate currently requires HailoRT `4.21.0`. 
+>
+> Frigate currently requires HailoRT `4.21.0`, so verify compatibility before installing a newer driver.
+
 1. Refresh the Proxmox package index.
    - `apt update` tells APT to refresh its package index by checking configured repositories for available package versions. It does not install any updates.
 
