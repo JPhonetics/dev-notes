@@ -40,7 +40,7 @@ reboot
 
 ## Related Documentation
 
-- [Proxmox - PCI Passthrough to LXC](../pci-passthrough-lxc.md)
+- [Proxmox - PCI Passthrough to LXC](./pci-passthrough-lxc.md)
 
 ## Official Documentation
 
