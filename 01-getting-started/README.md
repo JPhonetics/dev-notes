@@ -11,7 +11,7 @@ These guides focus on preparing a working environment before beginning developme
 
 ## Overview
 
-1. **[Windows Development Setup](windows/setup.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
+1. **[Windows Development Setup](setup-windows.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
 
 ## Related Documentation
 
