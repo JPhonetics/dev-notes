@@ -1,6 +1,6 @@
 ---
 Created: 2026-10-05
-Modified:
+Modified: 2026-10-19
 ---
 
 # Setup Windows for Development
@@ -213,3 +213,7 @@ This optional guide installs Codex CLI inside the Ubuntu WSL environment, connec
 📌 [Go to Guide](./ai/install-codex.md)
 
 </details>
+
+---
+
+[🔼 Back to Getting Started](README.md)

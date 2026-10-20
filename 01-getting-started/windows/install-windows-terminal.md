@@ -56,8 +56,12 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 
 ## Related Documentation
 
-- [Windows Development Setup](../setup-windows.md)
+- [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
 ## Official Documentation
 
 - [Windows Terminal Documentation](https://learn.microsoft.com/windows/terminal/)
+
+---
+
+[🔼 Back to Getting Started](../README.md)

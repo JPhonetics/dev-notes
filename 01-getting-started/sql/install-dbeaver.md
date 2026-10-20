@@ -37,8 +37,12 @@ This guide installs DBeaver on Windows and prepares it for connecting to databas
 
 ## Related Documentation
 
-- [Windows Development Setup](../setup-windows.md)
+- [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
 ## Official Documentation
 
 - [DBeaver Documentation](https://dbeaver.com/docs/dbeaver/)
+
+---
+
+[🔼 Back to Getting Started](../README.md)

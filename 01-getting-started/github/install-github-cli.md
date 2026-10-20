@@ -84,9 +84,13 @@ gh auth status
 
 ## Related Documentation
 
-- [Windows Development Setup](../setup-windows.md)
+- [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
 ## Official Documentation
 
 - [GitHub CLI Documentation](https://cli.github.com/manual/)
 - [GitHub Documentation](https://docs.github.com/)
+
+---
+
+[🔼 Back to Getting Started](../README.md)

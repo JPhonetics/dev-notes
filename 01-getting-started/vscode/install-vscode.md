@@ -86,10 +86,14 @@ VS Code extensions add language support, debugging tools, linters, formatters, f
 
 ## Related Documentation
 
-- [Windows Development Setup](../setup-windows.md)
+- [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
 ## Official Documentation
 
 - [Visual Studio Code Documentation](https://code.visualstudio.com/docs)
 - [VS Code WSL Documentation](https://code.visualstudio.com/docs/remote/wsl)
 - [VS Code Extensions Documentation](https://code.visualstudio.com/docs/editor/extension-marketplace)
+
+---
+
+[🔼 Back to Getting Started](../README.md)

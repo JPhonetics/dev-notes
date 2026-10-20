@@ -13,6 +13,6 @@ These guides focus on preparing a working environment before beginning developme
 
 1. **[Windows Development Setup](setup-windows.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
 
-## Related Documentation
+--- 
 
-- [Development Notes](../README.md) — Return to the main documentation index.
+[🔼 Back to Dev Notes](../README.md)
