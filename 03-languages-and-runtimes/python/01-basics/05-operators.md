@@ -1959,7 +1959,7 @@ Although decimal and binary use different notations, they can represent the same
 > [!NOTE]
 > This section provides a brief introduction to binary so we can understand how bitwise operators work.
 >
-> For a detailed explanation of number systems, binary place values, decimal/binary conversions, signed integers, and two's complement, see [Binary and Number Systems](../../02-concepts/binary-and-number-systems.md).
+> For a detailed explanation of number systems, binary place values, decimal/binary conversions, signed integers, and two's complement, see [Binary and Number Systems](../../../02-concepts/binary-and-number-systems.md).
 
 **Example 1: Displaying binary representations in Python.** We use `bin()` to display an integer in binary notation and the `0b` prefix to write a binary integer directly.
 
