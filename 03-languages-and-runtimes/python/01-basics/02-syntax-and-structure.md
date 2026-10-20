@@ -60,7 +60,9 @@ _private_value = 100
 user2 = "Bob"
 ```
 
-**Invalid identifiers (examples of code that will raise errors; do not execute):**
+**Invalid identifiers (do not execute):**
+
+The following names violate the rules above: `2username` begins with a number, `user-name` contains a hyphen, `user name` contains a space, and `class` is a reserved keyword.
 
 ```python
 2username = "Alice"
@@ -68,8 +70,6 @@ user-name = "Alice"
 user name = "Alice"
 class = "Python"
 ```
-
-Here, `2username` begins with a number, `user-name` uses a hyphen, `user name` contains a space, and `class` is reserved.
 
 ### Case Sensitivity
 
@@ -109,7 +109,6 @@ Python's PEP 8 style guide defines commonly accepted conventions for naming vari
 | Classes | `PascalCase` | `UserAccount` |
 | Constants | `UPPER_SNAKE_CASE` | `MAX_RETRIES` |
 | Modules | `lowercase` or `snake_case` | `file_utils.py` |
-
 **snake_case**
 
 Uses lowercase letters with underscores (`_`) separating words. Commonly used for variables and functions.
@@ -160,8 +159,8 @@ if = 25
 
 ```python
 age = 25
-
 if age >= 18:
+
     print("Adult")
 ```
 
@@ -183,7 +182,6 @@ The following table groups several common keywords by purpose. There is no need 
 | Logical and membership operations | `and`, `or`, `not`, `in`, `is` |
 | Imports | `import`, `from`, `as` |
 | Other | `True`, `False`, `None`, `pass`, `with`, `yield`, `async`, `await` |
-
 Python provides a standard library module named `keyword` that can display the reserved keywords supported by the current Python interpreter. The `keyword.kwlist` attribute contains these keywords, while `keyword.softkwlist` contains soft keywords.
 
 ```python
@@ -201,7 +199,6 @@ Python programs use statements and expressions to describe operations. Although 
 
 - **Statement:** A complete instruction that Python executes, such as assigning a value to a variable, defining a function, or executing a loop.
 - **Expression:** Code that evaluates to a value, such as a number, variable, calculation, comparison, or function call.
-
 Statements can contain expressions. An expression can also stand alone as a complete instruction; Python calls this an **expression statement**. For example, a call such as `print("Hello")` is a function-call expression, and when written by itself as a line of code, it is also an expression statement.
 
 ### Statements
@@ -233,7 +230,6 @@ In a `.py` script, these calculated values are not displayed automatically. Use 
 
 ```python
 age = 25
-
 age + 5
 ```
 
@@ -282,11 +278,11 @@ print("Hello, Python!")
 
 **The same function call within an assignment:**
 
+This still displays `Hello, Python!`, but the variable `message` receives `None`, not the printed text.
+
 ```python
 message = print("Hello, Python!")
 ```
-
-In both examples, `Hello, Python!` is displayed. In the second, `message` receives `None`, not the printed text.
 
 [🔼 Back to Overview](#overview)
 
@@ -299,19 +295,18 @@ The following examples produce the same output despite differences in blank line
 ```python
 name = "Alice"
 age = 25
+
 print(name, age)
 ```
 
 ```python
 name = "Alice"
-
 age = 25
-
 
 print(name, age)
 ```
 
-Output:
+**Output:**
 
 ```text
 Alice 25
@@ -332,9 +327,9 @@ In the following example, we define a function named `code_block()` containing t
 
 ```python
 def code_block():
+
     print("Line 1")
     print("Line 2")
-
 code_block()
 ```
 
@@ -345,13 +340,13 @@ Line 1
 Line 2
 ```
 
-Now, let's remove the indentation from the second `print()` statement. This moves it outside the function's code block, changing when it executes.
+Now, let's remove the indentation from the second `print()` statement. This moves it outside the function's code block. Because Python executes top-level statements in order, `print("Line 2")` runs before the call to `code_block()`, which then displays `Line 1`.
 
 ```python
 def code_block():
+
     print("Line 1")
 print("Line 2")
-
 code_block()
 ```
 
@@ -362,7 +357,7 @@ Line 2
 Line 1
 ```
 
-Notice how the output changes. Defining `code_block()` does not immediately execute the statements inside it. Instead, `print("Line 2")` executes first because it is outside the function. When `code_block()` is called, the indented `print("Line 1")` statement executes. Changing indentation changes which statements belong to the function and therefore when they execute.
+In this example, `Line 2` appears first because its `print()` statement is outside the function and executes before `code_block()` is called. The function call then displays `Line 1`.
 
 [🔼 Back to Overview](#overview)
 
@@ -464,7 +459,7 @@ def can_drive(age, has_license, has_insurance, is_registered):
 print(can_drive(18, True, True, True))
 ```
 
-The same function can be formatted across multiple lines, separating its parameters and conditions to make the code easier to read and modify.
+The same function can be formatted across multiple lines, separating its parameters and conditions to make the code easier to read and modify. Because the parameters and condition are enclosed in parentheses, no backslash is needed.
 
 ```python
 def can_drive(
@@ -491,7 +486,7 @@ print(can_drive(18, True, True, True))
 Meets driving requirements
 ```
 
-Both versions behave identically. Notice that parentheses already surround the function parameters, so no additional continuation character is needed.
+Both versions display `Meets driving requirements` for the supplied arguments.
 
 [🔼 Back to Overview](#overview)
 
@@ -505,13 +500,12 @@ Well-written documentation helps developers understand why certain decisions wer
 
 Comments begin with a hash symbol (`#`) and are ignored by Python during execution. They are useful for explaining logic, documenting decisions, and providing additional context about specific sections of code.
 
-Comments should generally explain *why* something is done rather than simply repeating what the code already communicates. A comment can appear on its own line or after a statement (an *inline comment*); neither changes the intended program behavior.
+Comments should generally explain **why** something is done rather than simply repeating what the code already communicates. A comment can appear on its own line or after a statement (an **inline comment**); neither changes the intended program behavior.
 
 ```python
 # Calculate the total price after applying a discount
 price = 100
 discount = 0.20
-
 total = price * (1 - discount)  # Apply the discount
 
 print(total)
@@ -525,7 +519,7 @@ print(total)
 
 ### Multiline Comments
 
-Python does not have a dedicated syntax for multiline comments. Instead, multiple comment lines can be written by placing a hash symbol (`#`) at the beginning of each line. 
+Python does not have a dedicated syntax for multiline comments. Instead, multiple comment lines can be written by placing a hash symbol (`#`) at the beginning of each line.
 
 > [!TIP]
 > The PEP 8 style guide recommends using `#` for regular comments, including comments spanning multiple lines. Triple-quoted strings are intended for multiline text and docstrings, not as a replacement for comments.
@@ -534,14 +528,12 @@ Python does not have a dedicated syntax for multiline comments. Instead, multipl
 # Calculate the total price after applying a discount.
 # The discount is represented as a decimal percentage.
 # For example, 0.20 represents a 20% discount.
-
 price = 100
 discount = 0.20
-
 total = price * (1 - discount)
 ```
 
-You may also encounter triple-quoted strings (`"""` or `'''`) used to simulate multiline comments. Although this resembles a multiline comment, triple quotes actually create a string literal. Python does not treat it as a comment, even when the string is not assigned to a variable or used elsewhere.
+You may also encounter triple-quoted strings (`"""` or `'''`) used to simulate multiline comments. Although this resembles a multiline comment, triple quotes actually create a string literal. Python does not treat it as a comment, even when the string is not assigned to a variable or used elsewhere. The example below creates an unused string literal, not a comment.
 
 ```python
 """
@@ -576,16 +568,14 @@ print(greet("Alice"))
 Hello, Alice!
 ```
 
-Docstrings can also span multiple lines to provide more detailed documentation, such as describing parameters and return values. The two forms below document the same behavior; the multiline version adds details for other developers.
+Docstrings can also span multiple lines to provide more detailed documentation, such as describing parameters and return values. The multiline version below documents the same `greet()` function as the preceding example, but includes additional details about its parameter and return value.
 
 ```python
 def greet(name):
     """
     Generate a personalized greeting.
-
     Args:
         name (str): The name of the person to greet.
-
     Returns:
         str: A greeting containing the person's name.
     """
@@ -605,7 +595,6 @@ For example, using the `greet()` function:
 def greet(name):
     """Return a greeting for the specified name."""
     return f"Hello, {name}!"
-
 help(greet)
 ```
 
@@ -613,12 +602,11 @@ help(greet)
 
 ```text
 Help on function greet in module __main__:
-
 greet(name)
     Return a greeting for the specified name.
 ```
 
-Docstrings can also be accessed directly using the `__doc__` attribute.
+The `__doc__` attribute provides direct access to the docstring without formatting it as a help page. For the same `greet()` function, it returns the greeting description shown below.
 
 ```python
 print(greet.__doc__)
@@ -641,50 +629,59 @@ Common errors include:
 - `SyntaxError` — Python encounters invalid syntax.
 - `IndentationError` — Code is incorrectly indented.
 - `TabError` — Tabs and spaces are used inconsistently in indentation.
-
 > [!IMPORTANT]
 > Syntax errors differ from runtime errors. Syntax errors prevent code from being compiled successfully, while runtime errors occur during execution. Runtime errors can be handled using Python's exception-handling mechanisms.
 
 **Missing colon**
 
+A compound statement such as `if True:` must end its header with a colon (`:`). The first example omits it, while the corrected version includes it.
+
 ```python
 # Incorrect
 if True
-    print("Hello")
 
+    print("Hello")
 # Correct
 if True:
+
     print("Hello")
 ```
 
 **Incorrect indentation**
 
+Statements inside an `if` block must be indented. The first version leaves `print()` unindented; the corrected version places it inside the block.
+
 ```python
 # Incorrect
 if True:
-print("Hello")
 
+print("Hello")
 # Correct
 if True:
+
     print("Hello")
 ```
 
 **Unclosed parentheses**
 
+Parentheses must be properly closed. The first `print()` call is missing a closing `)`.
+
 ```python
 # Incorrect
-print("Hello"
 
+print("Hello"
 # Correct
+
 print("Hello")
 ```
 
 **Invalid identifiers**
 
+An identifier cannot begin with a number. The corrected variable name `name2` starts with a letter.
+
 ```python
 # Incorrect
 2name = "Alice"
-
 # Correct
 name2 = "Alice"
 ```
@@ -692,5 +689,5 @@ name2 = "Alice"
 [🔼 Back to Overview](#overview)
 
 ---
- 
+
 [🔼 Back to Python Basics](README.md)

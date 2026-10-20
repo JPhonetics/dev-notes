@@ -36,7 +36,7 @@ mkdir python
 cd python
 ```
 
-6. Create a Python source file. You can name it whatever you prefer, but Python filenames should generally use lowercase letters and underscores (`_`) to separate words, such as `calculate_total.py`. This guide uses `learning.py`.
+6. Create a Python source file. You can name it whatever you prefer, but Python filenames should generally use lowercase letters and underscores (`_`) to separate words, such as `calculate_total.py` or `user_profile.py`. This guide uses `learning.py`.
    - `touch` creates an empty file if it doesn't exist or updates the timestamps of an existing file without modifying its contents.
 
 ```bash
