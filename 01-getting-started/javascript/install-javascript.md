@@ -110,9 +110,9 @@ npm --version
 
 ## Official Documentation
 
-- [Node.js Documentation](https://nodejs.org/docs/latest/api/)
-- [npm Documentation](https://docs.npmjs.com/)
-- [NVM Documentation](https://github.com/nvm-sh/nvm)
+- [Node.js Documentation](https://nodejs.org/docs/latest/api/) — Official API reference for Node.js, including built-in modules, functions, and runtime features.
+- [npm Documentation](https://docs.npmjs.com/) — Official documentation for managing JavaScript packages, dependencies, configuration, and npm commands.
+- [NVM Documentation](https://github.com/nvm-sh/nvm) — Official documentation for installing, managing, and switching between multiple Node.js versions using Node Version Manager (NVM).
 
 ---
 

@@ -15,6 +15,8 @@ This guide installs Git, configures the default branch name and user identity, s
 
 1. [Install Git](#install-git)
 2. [Verify Installation](#verify-installation)
+3. [Related Documentation](#related-documentation)
+4. [Official Documentation](#official-documentation)
 
 ## Install Git
 
@@ -103,8 +105,8 @@ git config --global -l
 
 ## Official Documentation
 
-- [Git Documentation](https://git-scm.com/docs)
-- [Git Book](https://git-scm.com/book/en/v2)
+- [Git Documentation](https://git-scm.com/docs) — Official reference for Git commands, configuration options, and version control functionality.
+- [Git Book](https://git-scm.com/book/en/v2) — Comprehensive guide to learning Git, covering fundamental concepts, practical workflows, branching, merging, and advanced techniques.
 
 ---
 

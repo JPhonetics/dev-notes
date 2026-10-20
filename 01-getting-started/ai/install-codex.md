@@ -21,6 +21,8 @@ This guide installs Codex CLI inside the Ubuntu WSL environment, connects it to 
 1. [Install Codex CLI](#install-codex-cli)
 2. [Log into ChatGPT](#log-into-chatgpt)
 3. [Verify Installation](#verify-installation)
+4. [Related Documentation](#related-documentation)
+5. [Official Documentation](#official-documentation)
 
 ## Install Codex CLI
 
@@ -75,8 +77,12 @@ codex --version
 
 ## Related Documentation
 
-- [Windows Development Setup](../setup-windows.md)
+- [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
 ## Official Documentation
 
-- [Codex Documentation](https://developers.openai.com/codex/)
+- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code/overview) — Official documentation for installing, configuring, and using Claude Code for AI-assisted development, including commands, features, and development workflows.
+
+---
+
+[🔼 Back to Getting Started](../README.md)

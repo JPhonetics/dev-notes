@@ -60,7 +60,7 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 
 ## Official Documentation
 
-- [Windows Terminal Documentation](https://learn.microsoft.com/windows/terminal/)
+- [Windows Terminal Documentation](https://learn.microsoft.com/windows/terminal/) — Official documentation for installing, configuring, and using Windows Terminal, including profiles, tabs, panes, appearance settings, and integration with PowerShell and WSL.
 
 ---
 

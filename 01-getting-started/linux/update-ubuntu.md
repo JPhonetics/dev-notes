@@ -64,8 +64,8 @@ sudo apt install curl nano unzip -y
 
 ## Official Documentation
 
-- [Ubuntu Documentation](https://documentation.ubuntu.com/)
-- [APT Documentation](https://manpages.ubuntu.com/manpages/noble/en/man8/apt.8.html)
+- [Ubuntu Documentation](https://documentation.ubuntu.com/) — Official documentation for installing, configuring, maintaining, and troubleshooting Ubuntu.
+- [APT Documentation](https://manpages.ubuntu.com/manpages/noble/en/man8/apt.8.html) — Official reference for APT commands and options used to install, update, remove, and manage software packages in Ubuntu.
 
 ---
 

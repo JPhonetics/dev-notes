@@ -22,6 +22,8 @@ This guide installs Claude Code inside the Ubuntu WSL environment, verifies that
 2. [Verify PATH](#verify-path)
 3. [Log into Claude Code](#log-into-claude-code)
 4. [Verify Installation](#verify-installation)
+5. [Related Documentation](#related-documentation)
+6. [Official Documentation](#official-documentation)
 
 ## Install Claude Code
 
@@ -115,8 +117,12 @@ claude --version
 
 ## Related Documentation
 
-- [Windows Development Setup](../setup-windows.md)
+- [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
 ## Official Documentation
 
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code/overview)
+- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code/overview) — Official documentation for installing, configuring, and using Claude Code for AI-assisted development.
+
+---
+
+[🔼 Back to Getting Started](../README.md)

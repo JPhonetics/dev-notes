@@ -92,7 +92,7 @@ wsl --list --verbose
 
 ## Official Documentation
 
-- [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/windows/wsl/)
+- [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/windows/wsl/) — Official Microsoft documentation for installing, configuring, managing, and troubleshooting WSL, including Linux distributions, commands, settings, and Windows integration.
 
 ---
 

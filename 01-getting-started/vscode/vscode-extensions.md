@@ -72,6 +72,10 @@ This guide documents the recommended VS Code extensions used throughout this dev
 - [Install Visual Studio Code](./install-vscode.md) — Install and configure VS Code for development with Windows and WSL.
 - [Setup Windows for Development](../setup-windows.md) — Follow the complete Windows development environment setup roadmap.
 
+## Official Documentation
+
+- [VS Code Extensions Documentation](https://code.visualstudio.com/docs/editor/extension-marketplace) — Official documentation for discovering, installing, managing, and configuring VS Code extensions.
+
 ---
 
 [🔼 Back to Getting Started](../README.md)

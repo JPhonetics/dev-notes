@@ -90,9 +90,9 @@ VS Code extensions add language support, debugging tools, linters, formatters, f
 
 ## Official Documentation
 
-- [Visual Studio Code Documentation](https://code.visualstudio.com/docs)
-- [VS Code WSL Documentation](https://code.visualstudio.com/docs/remote/wsl)
-- [VS Code Extensions Documentation](https://code.visualstudio.com/docs/editor/extension-marketplace)
+- [Visual Studio Code Documentation](https://code.visualstudio.com/docs) — Official documentation for installing, configuring, and using VS Code, including editor features, settings, debugging, and development tools.
+- [VS Code WSL Documentation](https://code.visualstudio.com/docs/remote/wsl) — Official guide for connecting VS Code to Windows Subsystem for Linux (WSL) and developing within a Linux environment.
+- [VS Code Extensions Documentation](https://code.visualstudio.com/docs/editor/extension-marketplace) — Official documentation for discovering, installing, managing, and configuring VS Code extensions.
 
 ---
 

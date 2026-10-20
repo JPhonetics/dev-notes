@@ -88,8 +88,8 @@ gh auth status
 
 ## Official Documentation
 
-- [GitHub CLI Documentation](https://cli.github.com/manual/)
-- [GitHub Documentation](https://docs.github.com/)
+- [GitHub CLI Documentation](https://cli.github.com/manual/) — Official reference for GitHub CLI commands, authentication, configuration, and managing GitHub resources from the terminal.
+- [GitHub Documentation](https://docs.github.com/) — Official guides for using GitHub, including repositories, collaboration, pull requests, issues, and automated workflows.
 
 ---
 

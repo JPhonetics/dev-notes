@@ -102,13 +102,14 @@ In addition to the naming rules enforced by Python, developers follow naming con
 
 Python's PEP 8 style guide defines commonly accepted conventions for naming variables, functions, classes, constants, and modules.
 
-| Element | Convention | Example |
+|  | Convention | Example |
 |---|---|---|
 | Variables | `snake_case` | `user_name` |
 | Functions | `snake_case` | `calculate_total()` |
 | Classes | `PascalCase` | `UserAccount` |
 | Constants | `UPPER_SNAKE_CASE` | `MAX_RETRIES` |
 | Modules | `lowercase` or `snake_case` | `file_utils.py` |
+
 **snake_case**
 
 Uses lowercase letters with underscores (`_`) separating words. Commonly used for variables and functions.

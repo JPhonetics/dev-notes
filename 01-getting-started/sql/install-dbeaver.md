@@ -41,7 +41,7 @@ This guide installs DBeaver on Windows and prepares it for connecting to databas
 
 ## Official Documentation
 
-- [DBeaver Documentation](https://dbeaver.com/docs/dbeaver/)
+- [DBeaver Documentation](https://dbeaver.com/docs/dbeaver/) — Official documentation for installing, configuring, and using DBeaver to manage databases, execute SQL queries, and work with database connections.
 
 ---
 

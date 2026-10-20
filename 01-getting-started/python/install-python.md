@@ -63,9 +63,9 @@ pip --version
 
 ## Official Documentation
 
-- [Python Documentation](https://docs.python.org/3/)
-- [pip Documentation](https://pip.pypa.io/en/stable/)
-- [Python Virtual Environments](https://docs.python.org/3/library/venv.html)
+- [Python Documentation](https://docs.python.org/3/) — Official documentation for Python, including language syntax, built-in functions, standard libraries, and programming concepts.
+- [pip Documentation](https://pip.pypa.io/en/stable/) — Official documentation for installing, upgrading, and managing Python packages and dependencies using pip.
+- [Python Virtual Environments](https://docs.python.org/3/library/venv.html) — Official reference for creating and managing isolated Python environments using the built-in `venv` module.
 
 ---
 
