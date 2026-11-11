@@ -23,7 +23,7 @@ Guides for managing Proxmox Virtual Environment (Proxmox VE), including virtual 
 
 - [PCI Passthrough to LXC](./proxmox/pci-passthrough-lxc.md) — Identify PCI devices, prepare kernel drivers, and expose compatible device nodes to Linux containers.
 
-    - [Hailo-8 Hailo-8 PCIe Driver](./proxmox/pci-passthrough-lxc-hailo-8.md) — Install the Hailo-8 PCIe driver on a Proxmox host for use with Linux containers.
+    - [Hailo-8 PCIe Driver](./proxmox/pci-passthrough-lxc-hailo-8.md) — Install the Hailo-8 PCIe driver on a Proxmox host for use with Linux containers.
 
 ---
 
