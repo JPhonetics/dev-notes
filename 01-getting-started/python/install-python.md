@@ -1,6 +1,6 @@
 ---
 Created: 2026-10-05
-Modified:
+Modified: 2026-11-10
 ---
 
 # Install Python
@@ -15,6 +15,8 @@ This guide installs Python, pip, virtual environment support, and system-level d
 
 1. [Install Python](#install-python)
 2. [Verify Installation](#verify-installation)
+3. [Related Documentation](#related-documentation)
+4. [Official Documentation](#official-documentation)
 
 ## Install Python
 
@@ -22,40 +24,47 @@ This guide installs Python, pip, virtual environment support, and system-level d
 > All commands in this guide are executed inside the **Ubuntu WSL environment**, not PowerShell or Command Prompt.
 
 1. Open **Windows Terminal**.
-2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
-3. Install Python and its supporting development packages.
-   - `sudo` (superuser do) executes a command with administrative privileges, which are required to install, update, or remove system packages.
-   - `apt install` installs the specified software packages and any required dependencies from Ubuntu's configured repositories. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
-   - `python3` installs the Python 3 interpreter used to execute Python scripts and applications.
-   - `python3-pip` installs pip, Python's package installer. It is used to install third-party libraries, frameworks, development tools, and project dependencies.
-   - `python3-venv` adds support for creating virtual environments that isolate a project's Python packages and dependencies from the system Python environment and other projects.
-   - `python3-dev` installs Python development headers and supporting files required by packages that compile native extensions, such as C or C++ components.
-   - `build-essential` installs common compiler and build tools such as GCC, G++, and `make`, which are used when software needs to compile native code.
-   - `python-is-python3` allows the `python` command to invoke Python 3 instead of requiring `python3`.
 
-```bash
-sudo apt install python3 python3-pip python3-venv python3-dev build-essential python-is-python3 -y
-```
+2. Confirm the terminal is running **Ubuntu (WSL)**. If not, click the `⌵` menu and select **Ubuntu**.
+
+3. Install Python and its supporting development packages.
+
+    - `sudo` (superuser do) executes a command with administrative privileges, which are required to install, update, or remove system packages.
+    - `apt install` installs the specified software packages and any required dependencies from Ubuntu's configured repositories. `-y` is an APT command-line option that automatically answers yes to confirmation prompts.
+    - `python3` installs the Python 3 interpreter used to execute Python scripts and applications.
+    - `python3-pip` installs pip, Python's package installer. It is used to install third-party libraries, frameworks, development tools, and project dependencies.
+    - `python3-venv` adds support for creating virtual environments that isolate a project's Python packages and dependencies from the system Python environment and other projects.
+    - `python3-dev` installs Python development headers and supporting files required by packages that compile native extensions, such as C or C++ components.
+    - `build-essential` installs common compiler and build tools such as GCC, G++, and `make`, which are used when software needs to compile native code.
+    - `python-is-python3` allows the `python` command to invoke Python 3 instead of requiring `python3`.
+
+    ```bash
+    sudo apt install python3 python3-pip python3-venv python3-dev build-essential python-is-python3 -y
+    ```
+
+[🔼 Back to Overview](#overview)
 
 ## Verify Installation
 
 1. Check the installed version of Python.
 
-```bash
-python --version
-```
+    ```bash
+    python --version
+    ```
 
 2. Check the installed version of Python 3.
 
-```bash
-python3 --version
-```
+    ```bash
+    python3 --version
+    ```
 
 3. Check the installed version of pip.
 
-```bash
-pip --version
-```
+    ```bash
+    pip --version
+    ```
+
+[🔼 Back to Overview](#overview)
 
 ## Related Documentation
 

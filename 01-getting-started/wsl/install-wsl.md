@@ -1,6 +1,6 @@
 ---
 Created: 2026-10-05
-Modified: 
+Modified: 2026-11-10
 ---
 
 # Install Windows Subsystem for Linux (WSL)
@@ -14,38 +14,44 @@ This guide installs WSL and Ubuntu, completes the initial Linux user configurati
 ## Overview
 
 1. [Install WSL](#install-wsl)
-2. [Install Ubuntu](#install-ubuntu)
+2. [Set Up Ubuntu](#set-up-ubuntu)
 3. [Verify Installation](#verify-installation)
+4. [Related Documentation](#related-documentation)
+5. [Official Documentation](#official-documentation)
 
 ## Install WSL
 
 1. Open **PowerShell as Administrator** and install Windows Subsystem for Linux (WSL).
-   - `wsl` is the Windows command-line tool used to install, configure, and manage Linux distributions running through WSL.
-   - `--install` installs the required WSL components and, by default, the Ubuntu Linux distribution.
 
-```powershell
-wsl --install
-```
+    - `wsl` is the Windows command-line tool used to install, configure, and manage Linux distributions running through WSL.
+    - `--install` installs the required WSL components and, by default, the Ubuntu Linux distribution.
+
+    ```powershell
+    wsl --install
+    ```
 
 2. After the installation completes, reboot Windows for the changes to take effect.
 
-## Install Ubuntu
+[🔼 Back to Overview](#overview)
 
-1. After restarting Windows, open **PowerShell as Administrator** and install Ubuntu.
-   - `Ubuntu` specifies the Linux distribution to install. WSL uses this name to identify Ubuntu from the available distributions.
+## Set Up Ubuntu
 
-```powershell
-wsl --install Ubuntu
-```
+1. After restarting Windows, launch **Ubuntu** from the Start menu. Alternatively, open **PowerShell** and launch Ubuntu using WSL.
 
-2. After the installation completes, Ubuntu should start in the same **PowerShell** window. During its first launch, you will be prompted to create a Linux username and password.
+    - `wsl -d Ubuntu` launches the installed Ubuntu distribution.
+        - `-d` specifies which Linux distribution to launch.
+        - `Ubuntu` identifies the Linux distribution.
 
-> [!IMPORTANT]
-> The Linux username and password are separate from your Windows account credentials. When entering the password, no characters will appear on screen. This is normal Linux terminal behavior.
+    ```powershell
+    wsl -d Ubuntu
+    ```
 
-After completing the initial setup, the terminal will enter the **Ubuntu environment**.
+2. During Ubuntu's first launch, you will be prompted to create a Linux username and password.
 
-<br>
+    > [!IMPORTANT]
+    > The Linux username and password are separate from your Windows account credentials. When entering the password, no characters will appear on screen. This is normal Linux terminal behavior.
+
+    After completing the initial setup, the terminal will enter the **Ubuntu environment**.
 
 > [!NOTE]
 > ### Alternative Linux distributions
@@ -62,29 +68,35 @@ After completing the initial setup, the terminal will enter the **Ubuntu environ
 > wsl --install <Distro>
 > ```
 
+[🔼 Back to Overview](#overview)
+
 ## Verify Installation
 
-1. Exit the **Ubuntu environment** to return to **PowerShell**. Alternatively, open a new **PowerShell** window and skip this step.
-   - `exit` closes the current Linux shell session and returns control to the previous terminal environment.
+1. Return to **PowerShell** to verify the WSL installation. If Ubuntu was launched from PowerShell, use `exit` to close the Linux shell and return to PowerShell. Otherwise, open a new **PowerShell** window.
 
-```bash
-exit
-```
+    - `exit` closes the current Linux shell session.
+
+    ```bash
+    exit
+    ```
 
 2. Check the installed Linux distributions and their WSL versions in **PowerShell**.
-   - `--list` displays the Linux distributions installed through WSL.
-   - `--verbose` displays additional information, including each distribution's current state and WSL version.
 
-```powershell
-wsl --list --verbose
-```
+    - `--list` displays the Linux distributions installed through WSL.
+    - `--verbose` displays additional information, including each distribution's current state and WSL version.
+
+    ```powershell
+    wsl --list --verbose
+    ```
 
 3. Confirm the installed Linux distribution and that the `VERSION` column shows `2`. The `*` indicates the default Linux distribution. The `STATE` value may vary from the example below.
 
-```text
-  NAME      STATE           VERSION
-* Ubuntu    Running         2
-```
+    ```text
+      NAME      STATE           VERSION
+    * Ubuntu    Running         2
+    ```
+
+[🔼 Back to Overview](#overview)
 
 ## Related Documentation
 

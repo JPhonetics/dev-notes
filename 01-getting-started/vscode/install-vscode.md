@@ -1,6 +1,6 @@
 ---
 Created: 2026-10-06
-Modified:
+Modified: 2026-11-10
 ---
 
 # Install Visual Studio Code
@@ -16,27 +16,36 @@ This guide installs VS Code on Windows, configures it for use with WSL, and veri
 1. [Install VS Code](#install-vs-code)
 2. [WSL Integration](#wsl-integration)
 3. [Configure Preferences](#configure-preferences)
-4. [Install Extensions](#install-extensions)
+4. [Verify Installation](#verify-installation)
+5. [Install Extensions](#install-extensions)
+6. [Related Documentation](#related-documentation)
+7. [Official Documentation](#official-documentation)
 
 ## Install VS Code
 
 1. Download and install [VS Code](https://code.visualstudio.com/download).
-   1. **Select Additional Tasks:** 
-      - ✅ Add "Open with Code" action to Windows Explorer file context menu
-      - ✅ Add "Open with Code" action to Windows Explorer directory context menu
-      - ✅ Register Code as an editor for supported file types
-      - ✅ Add to PATH (requires shell restart)
+
+    1. **Select Additional Tasks:** 
+        - ✅ Add "Open with Code" action to Windows Explorer file context menu
+        - ✅ Add "Open with Code" action to Windows Explorer directory context menu
+        - ✅ Register Code as an editor for supported file types
+        - ✅ Add to PATH (requires shell restart)
+
 2. Launch **VS Code**.
+
 3. Signing into **VS Code** is optional. It enables features such as:
-   - GitHub Copilot
-   - Settings Sync across multiple machines
-   - Extensions and services that use account authentication
+
+    - GitHub Copilot
+    - Settings Sync across multiple machines
+    - Extensions and services that use account authentication
+
+[🔼 Back to Overview](#overview)
 
 ## WSL Integration
 
 The WSL extension allows VS Code to connect directly to the Ubuntu environment running through WSL. When connected, VS Code continues to run as a Windows application while terminals, development tools, runtimes, and project files operate within the Linux environment.
 
-VS Code automatically remembers the most recent remote environment, so launching it later will return to the last remote connection.
+VS Code can reopen previously connected WSL workspaces, allowing you to return to your Linux projects without manually configuring the remote connection each time.
 
 1. Click the **Extensions** icon in the left panel.
 2. Install **WSL** by **Microsoft**.
@@ -47,6 +56,8 @@ VS Code automatically remembers the most recent remote environment, so launching
 > To change or close the remote connection:
 > 1. Click the `><` icon in the bottom-left corner.
 > 2. Select another connection or **Close Remote Connection**.
+
+[🔼 Back to Overview](#overview)
 
 ## Configure Preferences
 
@@ -66,7 +77,7 @@ Auto Save automatically saves file changes after a short delay, reducing the cha
 
 <br>
 
-Setting Ubuntu (WSL) as the default terminal ensures new integrated terminal sessions open inside the Linux development environment instead of PowerShell.
+When VS Code is connected to WSL, new integrated terminals automatically run inside the Linux environment. When working in a local Windows window, selecting Ubuntu (WSL) as the default terminal profile allows new terminals to open in Ubuntu instead of PowerShell.
 
 1. Select **Terminal > New Terminal**.
 2. Click the `⌵` menu in the **Terminal** section.
@@ -74,6 +85,39 @@ Setting Ubuntu (WSL) as the default terminal ensures new integrated terminal ses
 4. Select **Ubuntu (WSL)**.
 
 </details>
+
+[🔼 Back to Overview](#overview)
+
+## Verify Installation
+
+> [!NOTE]
+> If you previously configured VS Code as Git's default editor in the [Install Git](../git/install-git.md) guide, the `code` command is now available for Git to use when opening commit messages and other files requiring a text editor. No additional Git configuration is needed.
+
+1. Open **Windows Terminal** and select **Ubuntu (WSL)**.
+
+2. Open the current Linux directory in VS Code.
+
+    - `code .` opens the current working directory in Visual Studio Code.
+        - `code` launches VS Code from the terminal.
+        - `.` represents the current directory.
+
+    ```bash
+    code .
+    ```
+
+3. Confirm that VS Code opens the directory in a WSL window. The bottom-left corner should display a WSL connection indicator.
+
+4. Select **Terminal > New Terminal**.
+
+5. Verify that the integrated terminal is running inside Ubuntu.
+
+    ```bash
+    pwd
+    ```
+
+    The output should display the current directory as a Linux path, such as `/home/<USERNAME>`, rather than a Windows path.
+
+[🔼 Back to Overview](#overview)
 
 ## Install Extensions
 
@@ -83,6 +127,8 @@ VS Code extensions add language support, debugging tools, linters, formatters, f
 > Recommended VS Code extensions are documented separately. 
 >
 > 📌 [VS Code Extensions](./vscode-extensions.md)
+
+[🔼 Back to Overview](#overview)
 
 ## Related Documentation
 

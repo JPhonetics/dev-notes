@@ -1,6 +1,6 @@
 ---
 Created: 2026-10-05
-Modified: 
+Modified: 2026-11-10
 ---
 
 # Install Windows Terminal
@@ -16,12 +16,16 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 1. [Install Windows Terminal](#install-windows-terminal)
 2. [Set Default Profile](#set-default-profile)
 3. [Configure Appearance](#configure-appearance)
+4. [Related Documentation](#related-documentation)
+5. [Official Documentation](#official-documentation)
 
 ## Install Windows Terminal
 
 1. Open **Microsoft Store**.
 2. Search **Windows Terminal**.
 3. Install **Windows Terminal**.
+
+[🔼 Back to Overview](#overview)
 
 ## Set Default Profile
 
@@ -34,6 +38,8 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 4. Select **Ubuntu** under **Startup > Default profile**.
 5. Click **Save**.
 
+[🔼 Back to Overview](#overview)
+
 ## Configure Appearance
 
 > [!NOTE]
@@ -44,15 +50,17 @@ This guide installs Windows Terminal, configures Ubuntu as the default profile, 
 3. Select **Settings**.
 4. Select **Ubuntu** under **Profiles**.
 5. Configure the following:
-   - **Color scheme:** One Half Dark
-   - **Font face:** Cascadia Code
-   - **Font size:** 14
-   - **Padding:** 10
-   - **Scrollbar:** Visible
+    - **Color scheme:** One Half Dark
+    - **Font face:** Cascadia Code
+    - **Font size:** 14
+    - **Padding:** 10
+    - **Scrollbar:** Visible
 6. Click **Save**.
 
 > [!TIP]
 > Use the preview pane to test changes before saving.
+
+[🔼 Back to Overview](#overview)
 
 ## Related Documentation
 

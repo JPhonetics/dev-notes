@@ -1,18 +1,20 @@
 ---
 Created: 2026-10-19
-Modified:
+Modified: 2026-11-11
 ---
 
 # Getting Started
 
-Getting Started contains guides for setting up and configuring development environments, tools, and operating systems.
+Getting Started contains guides for installing, configuring, and managing development environments, tools, and operating systems.
 
-These guides focus on preparing a working environment before beginning development. Each guide walks through the necessary steps, explains important configuration choices, and includes ways to verify that everything is working correctly.
+These guides cover preparing a working development environment and performing common setup and configuration tasks. Each guide provides step-by-step instructions, explains important commands and configuration choices, and includes verification or troubleshooting guidance when applicable.
 
 ## Overview
 
-1. **[Windows Development Setup](setup-windows.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
+- **[Windows Development Setup](setup-windows.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
 
---- 
+- **[Connecting to Remote Servers with SSH](guides/ssh/connecting-to-remote-servers.md)** — Connect to remote servers from Windows, Linux, and macOS, transfer files securely, and troubleshoot common SSH connection issues.
+
+---
 
 [🔼 Back to Dev Notes](../README.md)

@@ -23,7 +23,7 @@ This guide introduces the built-in data types, their common characteristics, way
 
 ## Understanding Indexing
 
-**Indexing** allows developers to access individual elements within a sequence, such as a list or string, using their positions. Not all Python data types support indexing. Lists, tuples, and strings support positional indexing, while integers and sets do not.
+**Indexing** allows developers to access individual elements within a sequence, such as a list, tuple, or string, using their positions. Not every collection supports positional indexing. For example, dictionaries use keys to access values rather than numeric positions.
 
 An **element** is an individual item within a sequence or collection. For example, a list can contain multiple numbers, with each number representing an element. In a string, each individual character, including spaces, occupies a position in the sequence.
 
@@ -32,11 +32,24 @@ An **element** is an individual item within a sequence or collection. For exampl
 >
 > For example, `[10, "Hello", True]` is a list **object** containing three **elements**: an integer (`10`), a string (`"Hello"`), and a Boolean (`True`).
 
+### Positive and Negative Indexing
+
 Python uses **zero-based indexing**, meaning the first element has an index of `0`, the second has an index of `1`, and so on.
 
 **Negative indexing** allows developers to access elements by counting backward from the end of a sequence. An index of `-1` accesses the last element, `-2` accesses the second-to-last element, and so on. This is useful when accessing elements without knowing the sequence's length.
 
-Square brackets (`[]`) are used to specify the index immediately after the variable name.
+For example, consider the string `"Python"`:
+
+| Character | `P` | `y` | `t` | `h` | `o` | `n` |
+|---|---|---|---|---|---|---|
+| Positive index | `0` | `1` | `2` | `3` | `4` | `5` |
+| Negative index | `-6` | `-5` | `-4` | `-3` | `-2` | `-1` |
+
+Notice that **each character has both a positive and a negative index**. For example, the character `P` can be accessed using index `0` or `-6`, while `n` can be accessed using index `5` or `-1`.
+
+Positive indexing counts from the beginning of the sequence, while negative indexing counts backward from the end. Both access the same underlying elements.
+
+Square brackets (`[]`) are used to specify an index immediately after a sequence or a variable containing one.
 
 - **`variable[0]`** — Accesses the first element.
 - **`variable[1]`** — Accesses the second element.
@@ -47,13 +60,11 @@ Square brackets (`[]`) are used to specify the index immediately after the varia
 
 ### Indexing a List
 
-Lists are collections that allow elements to be accessed by their positions. Each element is separated by a `,`.
+Lists are ordered collections that allow elements to be accessed by their positions. Each element is separated by a comma (`,`).
 
-For example:
+**Example 1: Accessing elements in a list.**
 
 ```python
-# indexes   0   1   2   3   4
-# negative -5  -4  -3  -2  -1
 numbers = [40, 20, 10, 60, 30]
 
 print(numbers[0])
@@ -71,21 +82,26 @@ print(numbers[-1])
 30
 ```
 
-In this example, `numbers[0]` accesses the first element (`40`), `numbers[2]` accesses the third element (`10`), `numbers[4]` accesses the fifth element (`30`), and `numbers[-1]` accesses the last element (`30`) which is also the fifth element.
+Breaking down the results:
+
+1. **`numbers[0]`:** Accesses the first element (`40`).
+2. **`numbers[2]`:** Accesses the third element (`10`).
+3. **`numbers[4]`:** Accesses the fifth element (`30`).
+4. **`numbers[-1]`:** Accesses the last element (`30`), which is also at positive index `4`.
 
 ### Indexing a String
 
-Strings are sequences of characters, with each character occupying an index position beginning at `0`. Spaces also count as characters and occupy their own index positions.
+Strings are ordered sequences of characters, with each character occupying an index position beginning at `0`. Spaces also count as characters and occupy their own index positions.
 
-For example:
+The built-in **`repr(object)`** function returns a printable representation of an object. For strings, this representation can make otherwise invisible characters, such as spaces, easier to identify.
+
+**Example 2: Accessing characters in a string.**
 
 ```python
-# indexes  012345678
-# neg     -987654321
 message = "Hi there!"
 
 print(message[0])
-print(message[2])
+print(repr(message[2]))
 print(message[5])
 print(message[-3])
 ```
@@ -94,34 +110,182 @@ print(message[-3])
 
 ```text
 H
- 
+' '
 e
 r
 ```
 
-Each index accesses an individual character within the string, including spaces. `message[0]` accesses the first character (`H`), `message[2]` accesses the third character (a space), `message[5]` accesses the sixth character (`e`), and `message[-3]` accesses the third-to-last character (`r`).
+Breaking down the results:
 
-Notice that `message[2]` returns a space. Because `print()` displays that space without surrounding characters, the second line appears blank even though a character was printed.
+1. **`message[0]`:** Accesses the first character (`H`).
+2. **`message[2]`:** Accesses the third character, which is a space. The `repr()` function displays its printable representation (`' '`), including quotation marks, making the space easier to identify.
+3. **`message[5]`:** Accesses the sixth character (`e`).
+4. **`message[-3]`:** Accesses the third-to-last character (`r`).
+
+Normally, printing a space by itself would produce a line that appears blank. However, using `repr()` makes the space visible between quotation marks.
+
+> [!NOTE]
+> Each string index refers to one Unicode code point, which is not necessarily the same as one visible symbol.
+>
+> Additionally, a character such as a space, tab (`\t`), or newline (`\n`) still occupies one index position. Its visible width or effect on the output does not change the number of positions it occupies.
+
+### Indexing vs. Length
+
+Although indexing and length are related, they describe different things:
+
+- **Length:** The total number of elements in a sequence, returned by the built-in `len()` function.
+- **Index:** The position of an individual element within a sequence.
+
+Both are useful, but they serve different purposes depending on what a developer needs to accomplish.
+
+- **Use length when you need to know how many elements exist.** For example, checking how many characters a password contains, how many items are in a shopping cart, or whether a list is empty.
+- **Use indexing when you need to access a specific element.** For example, retrieving the first character of a username, examining the last item in a list, or accessing an element somewhere in the middle of a sequence.
+- **Use length and indexing together when you need to calculate positions.** For example, finding the last valid positive index, calculating a middle position, or working with elements based on the sequence's size.
+
+The built-in **`len(object)`** function returns the number of items in an object. For strings, it counts Unicode code points; for lists and tuples, it counts their elements.
+
+Because Python uses zero-based indexing, **the last valid positive index of a nonempty sequence is always one less than its length**.
+
+For example, `"Python"` contains six characters:
+
+| Description | Value |
+|---|---|
+| Sequence | `"Python"` |
+| Length | `6` |
+| First positive index | `0` |
+| Last positive index | `5` |
+| Index of the last element (negative) | `-1` |
+| Index of the first element (negative) | `-6` |
+
+The relationship can be expressed as:
+
+`Last valid positive index = len(sequence) - 1`
+
+For `"Python"`, `len("Python") - 1` equals `5`.
+
+This distinction matters because **the length tells us how many elements exist, while an index identifies where an element is located**. A sequence containing six elements has positions `0` through `5`, not `1` through `6`.
+
+Developers may need to calculate indexes when working with sequences whose lengths are unknown or change while a program runs. For example, a program might need to identify the final position in a list, calculate where the middle element is located, or process elements based on their positions.
+
+For simply accessing the last element, `sequence[-1]` is usually easier to read. However, **`len(sequence) - 1` provides the last positive index itself**, which can be useful for calculations and other index-based operations.
+
+Depending on what a developer needs, different approaches may be more convenient:
+
+| Goal | Example | Explanation |
+|---|---|---|
+| Count elements | `len(sequence)` | Returns the total number of elements |
+| Access the first element | `sequence[0]` | Retrieves the element at index `0` |
+| Access the last element | `sequence[-1]` | Retrieves the last element without calculating its positive index |
+| Find the last positive index | `len(sequence) - 1` | Calculates the last valid positive index |
+| Access an element near the middle | `sequence[len(sequence) // 2]` | Retrieves an element at or near the middle |
+
+The **floor division operator (`//`)** divides two numbers and rounds the result down to the nearest integer.
+
+When used in `len(sequence) // 2`, it produces an integer index:
+
+- For an **odd-length sequence**, it selects the middle element.
+- For an **even-length sequence**, it selects the element immediately to the right of the two central elements.
+
+**Example 3: Using length to calculate index positions.** The following example demonstrates how developers can combine `len()` with indexing to access elements without manually specifying their positive positions.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(len(numbers))
+print(numbers[0])
+print(numbers[-1])
+print(len(numbers) - 1)
+print(numbers[len(numbers) // 2])
+```
+
+**Output:**
+
+```text
+5
+10
+50
+4
+30
+```
+
+Breaking down the results:
+
+1. **`len(numbers)`:** Returns `5`, the number of elements in the list.
+2. **`numbers[0]`:** Accesses the first element (`10`).
+3. **`numbers[-1]`:** Accesses the last element (`50`) without needing its positive index.
+4. **`len(numbers) - 1`:** Calculates the last valid positive index (`4`), rather than retrieving the element at that position.
+5. **`numbers[len(numbers) // 2]`:** Calculates the middle index (`5 // 2 = 2`) and retrieves the element at that position (`30`).
+
+> [!NOTE]
+> The `len(sequence) // 2` expression identifies one middle-position index, not necessarily a unique middle element.
+>
+> For example, a sequence with six elements has two central elements at indexes `2` and `3`. The expression `6 // 2` evaluates to `3`, selecting the right-hand middle element.
+>
+> Accessing the first, last, or middle element using indexing requires a nonempty sequence.
 
 ### Accessing an Invalid Index
 
-Attempting to access an index outside the available range raises an `IndexError`.
+An **`IndexError`** occurs when code attempts to access an index outside a sequence's valid range.
 
-For example, a list containing three elements has indexes `0`, `1`, and `2`. Attempting to access index `3` raises an error because no element exists at that position.
+For a **nonempty** sequence containing `n` elements, valid indexes range from:
 
-**Invalid (raises an error):**
+- **Positive indexing:** `0` through `n - 1`.
+- **Negative indexing:** `-1` through `-n`.
+
+For example, a list containing three elements has valid positive indexes `0`, `1`, and `2`, and valid negative indexes `-1`, `-2`, and `-3`.
+
+Attempting to access index `3` or `-4` raises an error because no element exists at those positions.
+
+**Example 4: Accessing an invalid positive index.** The following example demonstrates why the length of a sequence is not itself a valid positive index.
 
 ```python
 numbers = [10, 20, 30]
 
-print(numbers[3])
+print(len(numbers))
+print(numbers[len(numbers)])
 ```
 
 **Output (error):**
 
 ```text
+3
+Traceback (most recent call last):
+  ...
 IndexError: list index out of range
 ```
+
+Breaking down the results:
+
+1. **`len(numbers)`:** Returns `3` because the list contains three elements.
+2. **`numbers[len(numbers)]`:** Evaluates to `numbers[3]`, attempting to access the fourth element.
+3. **`IndexError`:** Python raises an exception because the valid positive indexes are `0`, `1`, and `2`. There is no element at index `3`.
+
+The same error occurs when accessing an invalid negative index.
+
+**Example 5: Accessing an invalid negative index.**
+
+```python
+numbers = [10, 20, 30]
+
+print(numbers[-4])
+```
+
+**Output (error):**
+
+```text
+Traceback (most recent call last):
+  ...
+IndexError: list index out of range
+```
+
+The list contains only three elements, so negative indexing cannot extend beyond `-3`. Attempting to access `numbers[-4]` requests a position that does not exist.
+
+> [!IMPORTANT]
+> An empty sequence has a length of `0` and contains no valid element indexes.
+>
+> For example, both `empty[0]` and `empty[-1]` raise an `IndexError` when `empty = ""` or `empty = []`.
+>
+> The calculation `len(sequence) - 1` produces a valid last positive index only when the sequence contains at least one element.
 
 [🔼 Back to Overview](#overview)
 
