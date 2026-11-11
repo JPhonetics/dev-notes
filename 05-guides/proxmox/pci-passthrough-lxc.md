@@ -11,7 +11,7 @@ Unlike a virtual machine, an LXC shares the Proxmox host's Linux kernel. The har
 
 Not every PCI or PCIe device supports this method. Device compatibility and access requirements depend on the hardware, kernel driver, and software using the device.
 
-See [Device-Specific Installation](#device-specific-installation) for device-specific driver installation instructions. These guides contain only the steps unique to that device. Return to this guide afterward to complete the LXC passthrough process.
+See [Device-Specific Driver Installation](#device-specific-driver-installation) for device-specific driver installation instructions. These guides contain only the steps unique to that device. Return to this guide afterward to complete the LXC passthrough process.
 
 > [!IMPORTANT]
 > This guide uses `sudo` for commands requiring administrative privileges on the Proxmox host. It assumes you are connected using a Linux account with sudo access. Proxmox commonly uses the root account for host administration, and a separate sudo-enabled account may require additional configuration.
@@ -24,7 +24,7 @@ See [Device-Specific Installation](#device-specific-installation) for device-spe
 2. [Check for the PCI Device Driver](#check-for-the-pci-device-driver)
 3. [Install Proxmox Kernel Headers](#install-proxmox-kernel-headers)
 4. [Install the PCI Device Driver](#install-the-pci-device-driver)
-    - [Device-Specific Installation](#device-specific-installation)
+    - [Device-Specific Driver Installation](#device-specific-driver-installation)
 5. [Verify the PCI Device Driver Installation](#verify-the-pci-device-driver-installation)
 6. [Expose the Device to the LXC](#expose-the-device-to-the-lxc)
 7. [Verify the Device Inside the LXC](#verify-the-device-inside-the-lxc)
@@ -178,7 +178,7 @@ Installing the matching kernel headers ahead of time prepares the host for drive
 > [!CAUTION]
 > Before installing the latest driver, review the hardware vendor's documentation and the requirements of any applications that will use the device. Some applications support only specific driver versions.
 
-For device-specific driver installation and configuration instructions, see [Device-Specific Installation](#device-specific-installation).
+For device-specific driver installation and configuration instructions, see [Device-Specific Driver Installation](#device-specific-driver-installation).
 
 If no kernel driver is currently bound to the PCI device, determine whether a compatible driver is already installed or needs to be installed separately. A driver may be present but not loaded, or the device may require a vendor-specific driver.
 
@@ -224,7 +224,7 @@ There are two common ways to download a driver package.
     scp "$HOME\Downloads\<FILENAME>" <USERNAME>@<IP_ADDRESS>:/tmp/
     ```
 
-### Device-Specific Installation
+### Device-Specific Driver Installation
 
 These guides contain only the driver installation and any device-specific instructions. Return to this guide afterward to complete the LXC passthrough process.
 
