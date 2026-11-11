@@ -13,7 +13,7 @@ These guides cover preparing a working development environment and performing co
 
 - **[Windows Development Setup](setup-windows.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
 
-- **[Connecting to Remote Servers with SSH](guides/ssh/connecting-to-remote-servers.md)** — Connect to remote servers from Windows, Linux, and macOS, transfer files securely, and troubleshoot common SSH connection issues.
+- **[Connecting to Remote Servers with SSH](remote-access/ssh.md)** — Connect to remote servers from Windows, Linux, and macOS, transfer files securely, and troubleshoot common SSH connection issues.
 
 ---
 

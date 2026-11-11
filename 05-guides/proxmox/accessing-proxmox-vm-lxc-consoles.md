@@ -94,7 +94,7 @@ This restriction applies to SSH authentication, not local console access. You ca
 For routine remote administration, consider creating a separate Linux user and granting sudo privileges when required.
 
 - [Create a Linux User](../linux/create-linux-user.md) — Create a non-root account, configure optional sudo privileges, and verify user access.
-- [Connecting to Remote Servers with SSH](../ssh/connecting-to-remote-servers.md) — Connect remotely, configure authentication, and troubleshoot SSH access.
+- [Connecting to Remote Servers with SSH](../../01-getting-started/remote-access/ssh.md) — Connect remotely, configure authentication, and troubleshoot SSH access.
 
 > [!NOTE]
 > Creating a Linux user does not automatically enable SSH. The guest must have an SSH server installed, running, and configured to permit the account to authenticate.
@@ -104,7 +104,7 @@ For routine remote administration, consider creating a separate Linux user and g
 ## Related Documentation
 
 - [Create a Linux User](../linux/create-linux-user.md) — Create a non-root Linux account, configure optional sudo privileges, and verify account access.
-- [Connecting to Remote Servers with SSH](../ssh/connecting-to-remote-servers.md) — Connect to remote servers using SSH from Windows, Linux, and macOS.
+- [Connecting to Remote Servers with SSH](../../01-getting-started/remote-access/ssh.md) — Connect to remote servers using SSH from Windows, Linux, and macOS.
 
 ## Official Documentation
 
