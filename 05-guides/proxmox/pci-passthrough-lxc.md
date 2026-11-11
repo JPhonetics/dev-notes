@@ -228,7 +228,7 @@ There are two common ways to download a driver package.
 
 These guides contain only the driver installation and any device-specific instructions. Return to this guide afterward to complete the LXC passthrough process.
 
-- [Hailo-8 PCI Passthrough to LXC](./pci-passthrough-lxc-hailo-8.md)
+- [Hailo-8 PCIe Driver](./pci-passthrough-lxc-hailo-8.md)
 
 [🔼 Back to Overview](#overview)
 
