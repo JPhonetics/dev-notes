@@ -325,8 +325,7 @@ This error occurs when the SSH host key presented by a server does not match the
 
 SSH stores previously accepted host keys in a `known_hosts` file to detect unexpected changes and protect against potential interception attempts.
 
-> [!CAUTION]
-> A changed SSH host key can indicate a legitimate server replacement or a potential security issue. Never remove a saved host key or accept a replacement without first verifying the server's identity.
+> **⚠️ CAUTION:** A changed SSH host key can indicate a legitimate server replacement or a potential security issue. Never remove a saved host key or accept a replacement without first verifying the server's identity.
 
 1. Confirm that the IP address or hostname belongs to the intended server. Verify the server's new SSH host-key fingerprint using a trusted source before proceeding.
 
