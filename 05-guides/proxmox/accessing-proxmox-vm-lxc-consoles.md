@@ -48,7 +48,7 @@ Proxmox provides the `pct` command-line utility for managing Linux containers. A
 
 If the container is stopped, start it through the Proxmox web interface before continuing.
 
-1. Open the **Proxmox web interface**.
+1. Log in to the **Proxmox web interface**.
 
 2. Select the Proxmox node hosting the container.
 

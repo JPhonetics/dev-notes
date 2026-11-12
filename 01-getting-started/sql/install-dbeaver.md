@@ -42,7 +42,6 @@ This guide installs DBeaver on Windows and prepares it for connecting to databas
 
 [🔼 Back to Overview](#overview)
 
-
 ## Verify Installation
 
 1. Open **DBeaver**.

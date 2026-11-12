@@ -47,7 +47,7 @@ In most cases, no additional installation is required. If the `ssh` command is u
 Windows 11 normally includes OpenSSH Client. If it is missing, install it through Windows Optional Features.
 
 1. Open **Settings**.
-2. Navigate to **System > Optional features**.
+2. Navigate to **System → Optional features**.
 3. Select **View features** under **Add an optional feature**.
 4. Search for and select **OpenSSH Client**.
 5. Click **Next**, then **Add**.

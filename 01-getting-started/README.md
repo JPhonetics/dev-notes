@@ -11,9 +11,11 @@ These guides cover preparing a working development environment and performing co
 
 ## Overview
 
-- **[Windows Development Setup](setup-windows.md)** — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
+- [Windows Development Setup](setup-windows.md) — Prepare Windows for development, including Windows Subsystem for Linux (WSL), Ubuntu, and essential development tools.
 
-- **[Connecting to Remote Servers with SSH](remote-access/ssh.md)** — Connect to remote servers from Windows, Linux, and macOS, transfer files securely, and troubleshoot common SSH connection issues.
+- [Connecting to Remote Servers with SSH](remote-access/ssh.md) — Connect to remote servers from Windows, Linux, and macOS, transfer files securely, and troubleshoot common SSH connection issues.
+
+- [Set Up a Remote Development Environment](./development/setup-remote-development.md) — Configure a centralized Linux development environment using Proxmox, Ubuntu Server, SSH, and VS Code Remote - SSH to access the same projects and tools from multiple computers.
 
 ---
 
