@@ -58,10 +58,10 @@ This guide installs the Hailo-8 PCIe kernel driver on a Proxmox host using the p
     sudo dpkg --install /tmp/hailort-pcie-driver_4.24.0_all.deb
     ```
 
-4. Reboot the Proxmox host if required by the driver installation instructions. A newly installed kernel driver or firmware may require a reboot before the hardware becomes available.
+> [!WARNING]
+> Rebooting the Proxmox host interrupts running virtual machines, LXCs, and services. Plan the reboot accordingly.
 
-    > [!WARNING]
-    > Rebooting the Proxmox host interrupts running virtual machines, LXCs, and services. Plan the reboot accordingly.
+4. Reboot the Proxmox host if required by the driver installation instructions. A newly installed kernel driver or firmware may require a reboot before the hardware becomes available.
 
     - `sudo reboot` restarts the Proxmox host.
 

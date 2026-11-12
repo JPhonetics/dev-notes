@@ -91,8 +91,8 @@ The `adduser` utility creates a new Linux user account and configures its basic 
 
 2. Enter and confirm a password when prompted. The password is used to authenticate the new account when password-based authentication is permitted.
 
-    > [!NOTE]
-    > Password characters are not displayed while typing in the terminal. This is normal behavior.
+> [!NOTE]
+> Password characters are not displayed while typing in the terminal. This is normal behavior.
 
 3. Complete the optional account information prompts. 
 
@@ -129,8 +129,8 @@ Users can change their own passwords without administrative privileges. Run the 
     passwd <USERNAME>
     ```
 
-    > [!NOTE]
-    > If using an account with sudo privileges instead of root, execute the command as `sudo passwd <USERNAME>`.
+> [!NOTE]
+> If using an account with sudo privileges instead of root, execute the command as `sudo passwd <USERNAME>`.
 
 [🔼 Back to Overview](#overview)
 
@@ -166,11 +166,11 @@ By default, a newly created user does not automatically receive administrative p
     usermod -aG sudo <USERNAME>
     ```
 
-    > [!IMPORTANT]
-    > Always use `-a` with `-G` when adding supplementary groups. Omitting `-a` can replace the user's existing supplementary group memberships.
+> [!IMPORTANT]
+> Always use `-a` with `-G` when adding supplementary groups. Omitting `-a` can replace the user's existing supplementary group memberships.
 
-    > [!NOTE]
-    > The updated group membership takes effect when the user starts a new login session. If the user is already logged in, log out and reconnect before verifying sudo access.
+> [!NOTE]
+> The updated group membership takes effect when the user starts a new login session. If the user is already logged in, log out and reconnect before verifying sudo access.
 
 [🔼 Back to Overview](#overview)
 

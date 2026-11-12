@@ -46,15 +46,15 @@ This guide installs WSL and Ubuntu, completes the initial Linux user configurati
     wsl -d Ubuntu
     ```
 
-2. During Ubuntu's first launch, you will be prompted to create a Linux username and password.
+> [!IMPORTANT]
+> The Linux username and password are separate from your Windows account credentials. When entering the password, no characters will appear on screen. This is normal Linux terminal behavior.
 
-    > [!IMPORTANT]
-    > The Linux username and password are separate from your Windows account credentials. When entering the password, no characters will appear on screen. This is normal Linux terminal behavior.
+2. During Ubuntu's first launch, you will be prompted to create a Linux username and password.
 
     After completing the initial setup, the terminal will enter the **Ubuntu environment**.
 
 > [!NOTE]
-> ### Alternative Linux distributions
+> **Alternative Linux distributions**
 >
 > `--list --online` displays the Linux distributions available for installation.
 >
@@ -62,10 +62,10 @@ This guide installs WSL and Ubuntu, completes the initial Linux user configurati
 > wsl --list --online
 > ```
 >
-> Install a different distribution by replacing `<Distro>` with its listed name:
+> Install a different distribution by replacing `<DISTRO>` with its listed name:
 >
 > ```powershell
-> wsl --install <Distro>
+> wsl --install <DISTRO>
 > ```
 
 [🔼 Back to Overview](#overview)

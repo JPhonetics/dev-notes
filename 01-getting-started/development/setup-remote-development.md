@@ -83,8 +83,8 @@ For this guide, I will be creating an Ubuntu Server VM using Proxmox VE because 
     | Memory | 8192 MiB (8 GiB) |
     | Network | VirtIO, appropriate bridge and VLAN ID |
 
-    > [!NOTE]
-    > These are suggested starting resources. Increase the CPU, RAM, or storage as development workloads grow. The `host` CPU type is suitable for a VM that remains on the same physical host, but can limit migration compatibility with hosts using different CPUs.
+  > [!NOTE]
+  > These are suggested starting resources. Increase the CPU, RAM, or storage as development workloads grow. The `host` CPU type is suitable for a VM that remains on the same physical host, but can limit migration compatibility with hosts using different CPUs.
 
 7. Review the configuration and click **Finish**.
 
@@ -112,8 +112,8 @@ This guide uses Ubuntu Server as the development server's operating system. If y
 
 5. Log in to Ubuntu using the Linux account created during installation or connect via SSH.
 
-    > [!NOTE]
-    > For detailed SSH connection instructions, authentication options, and troubleshooting, see [Connecting to Remote Servers with SSH](../remote-access/ssh.md).
+> [!NOTE]
+> For detailed SSH connection instructions, authentication options, and troubleshooting, see [Connecting to Remote Servers with SSH](../remote-access/ssh.md).
 
 6. Update the installed software packages.
 
@@ -130,12 +130,12 @@ This guide uses Ubuntu Server as the development server's operating system. If y
     sudo apt upgrade -y
     ```
 
-7. Install the QEMU Guest Agent if the development server is running as a Proxmox VM. The QEMU Guest Agent allows Proxmox to communicate with the guest operating system for certain management operations, including retrieving guest information and coordinating shutdown operations.
+> [!IMPORTANT]
+> The QEMU Guest Agent is intended for compatible virtualized environments and is not required for bare-metal installations. Skip this step if the development server is running on physical hardware.
+>
+> Some Ubuntu versions use a static systemd unit for the agent, so manually enabling the service may not be supported.
 
-    > [!IMPORTANT]
-    > The QEMU Guest Agent is intended for compatible virtualized environments and is not required for bare-metal installations. Skip this step if the development server is running on physical hardware.
-    >
-    > Some Ubuntu versions use a static systemd unit for the agent, so manually enabling the service may not be supported.
+7. Install the QEMU Guest Agent if the development server is running as a Proxmox VM. The QEMU Guest Agent allows Proxmox to communicate with the guest operating system for certain management operations, including retrieving guest information and coordinating shutdown operations.
 
     - `sudo apt install qemu-guest-agent -y` installs the QEMU Guest Agent.
         - `install` installs the specified software package.
@@ -173,8 +173,8 @@ SSH provides encrypted remote access to the development server. This allows VS C
     sudo systemctl status ssh --no-pager
     ```
 
-    > [!NOTE]
-    > Some Ubuntu installations use systemd socket activation, allowing SSH to accept connections without keeping the service continuously running. If the service is inactive, check `sudo systemctl status ssh.socket --no-pager` for `active (listening)`.
+> [!NOTE]
+> Some Ubuntu installations use systemd socket activation, allowing SSH to accept connections without keeping the service continuously running. If the service is inactive, check `sudo systemctl status ssh.socket --no-pager` for `active (listening)`.
 
 2. Identify the VM's IP address. This is the IP address you use to connect to it.
 

@@ -65,8 +65,8 @@ If the container is stopped, start it through the Proxmox web interface before c
     pct enter <CTID>
     ```
 
-    > [!NOTE]
-    > If accessing the Proxmox host through a non-root account with sudo privileges, use `sudo pct enter <CTID>` instead.
+> [!NOTE]
+> If accessing the Proxmox host through a non-root account with sudo privileges, use `sudo pct enter <CTID>` instead.
 
 5. Run the required commands inside the container.
 

@@ -159,12 +159,12 @@ This guide installs Docker Engine and Docker Compose inside the Ubuntu WSL2 envi
 
     The service should report `active (running)`. Press `q` to exit the status display if it opens in a pager.
 
-    > [!NOTE]
-    > If Docker is not running, start it manually using `systemctl start`. The `start` command tells `systemctl` to start the specified    service.
-    >
-    > ```bash
-    > sudo systemctl start docker
-    > ```
+> [!NOTE]
+> If Docker is not running, start it manually using `systemctl start`. The `start` command tells `systemctl` to start the specified    service.
+>
+> ```bash
+> sudo systemctl start docker
+> ```
 
 [🔼 Back to Overview](#overview)
 

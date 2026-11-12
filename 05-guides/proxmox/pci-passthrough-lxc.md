@@ -45,8 +45,8 @@ See [Device-Specific Driver Installation](#device-specific-driver-installation) 
     ssh <USERNAME>@<IP_ADDRESS>
     ```
 
-    > [!NOTE]
-    > For instructions on connecting to remote servers from Windows, Linux, or macOS, including SSH authentication, custom ports, and file transfer, see [Connecting to Remote Servers with SSH](../../01-getting-started/ssh/connecting-to-remote-servers.md).
+> [!NOTE]
+> For instructions on connecting to remote servers from Windows, Linux, or macOS, including SSH authentication, custom ports, and file transfer, see [Connecting to Remote Servers with SSH](../../01-getting-started/ssh/connecting-to-remote-servers.md).
 
 2. Update the local PCI ID database before identifying the hardware. This ensures `lspci` uses the latest available PCI vendor and device names instead of potentially outdated information.
 
@@ -94,12 +94,12 @@ See [Device-Specific Driver Installation](#device-specific-driver-installation) 
 
 4. Make note of the PCI address, also called the Bus:Device.Function (BDF) address. It identifies the device's location within the PCI/PCIe hierarchy and is commonly used when configuring passthrough. In this example, the address is `06:00.0`. The address may vary depending on the hardware installed and how the system assigns PCI resources.
 
-    > [!NOTE]
-    > The PCI address can change after hardware changes or reboots.
-    > 
-    > - **Bus** identifies a PCI/PCIe pathway that can contain multiple devices. For example, devices `03:00.0`, `03:01.0`, and `03:02.0` are all located on bus `03`.
-    > - **Device** identifies a specific device on that bus. For example, `03:01.0` identifies device `01` on bus `03`.
-    > - **Function** identifies a logical function exposed by a device. A single physical device can expose multiple functions. For example, a GPU may appear as `03:03.0` for graphics and `03:03.1` for its HDMI/DisplayPort audio controller.
+> [!NOTE]
+> The PCI address can change after hardware changes or reboots.
+> 
+> - **Bus** identifies a PCI/PCIe pathway that can contain multiple devices. For example, devices `03:00.0`, `03:01.0`, and `03:02.0` are all located on bus `03`.
+> - **Device** identifies a specific device on that bus. For example, `03:01.0` identifies device `01` on bus `03`.
+> - **Function** identifies a logical function exposed by a device. A single physical device can expose multiple functions. For example, a GPU may appear as `03:03.0` for graphics and `03:03.1` for its HDMI/DisplayPort audio controller.
 
 [🔼 Back to Overview](#overview)
 
@@ -297,8 +297,8 @@ If the driver creates a device node, continue with the steps below. If no device
     sudo pct reboot <CTID>
     ```
 
-    > [!NOTE]
-    > If the LXC is stopped, use `sudo pct start <CTID>` to start it.
+> [!NOTE]
+> If the LXC is stopped, use `sudo pct start <CTID>` to start it.
 
 [🔼 Back to Overview](#overview)
 
