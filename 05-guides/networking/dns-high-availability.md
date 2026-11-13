@@ -27,6 +27,15 @@ When the primary instance recovers, Keepalived is configured to automatically re
 
 Additionally, **AdGuard Home Sync** keeps both instances configured consistently by synchronizing supported settings, filtering rules, and DNS rewrites. This ensures the secondary instance provides the same DNS behavior when it takes over.
 
+## 📋 Prerequisites
+
+1. **Two AdGuard Home instances**
+    - Both installed, configured, and independently capable of resolving DNS queries.
+    - Preferably hosted on separate physical systems to reduce shared points of failure.
+2. **Three IP addresses on the same subnet**
+    - One static IP address for each AdGuard Home instance and one additional, unused IP address for the shared VIP.
+    - All three addresses must be accessible through the same Layer 2 network.
+
 ## 🏠 My Environment
 
 | Component | IP Address | Role |
@@ -43,15 +52,6 @@ My network has a few additional considerations that may not apply to every deplo
 - **OPNsense, Unbound, and Dnsmasq:** Since I use these services for DNS routing and resolution, I need to verify my DNS forwarding configuration, prevent resolution loops, and update firewall/NAT rules to use the VIP.
 - **Static DNS configurations:** Since not all devices obtain DNS settings through DHCP, I need to update manually configured DNS addresses on devices such as Proxmox, Unraid, and other infrastructure to use the VIP.
 
-## 📋 Prerequisites
-
-1. **Two AdGuard Home instances**
-    - Both installed, configured, and independently capable of resolving DNS queries.
-    - Preferably hosted on separate physical systems to reduce shared points of failure.
-2. **Three IP addresses on the same subnet**
-    - One static IP address for each AdGuard Home instance and one additional, unused IP address for the shared VIP.
-    - All three addresses must be accessible through the same Layer 2 network.
-
 ## Overview
 
 1. [Back Up & Restore AdGuard Home](#back-up--restore-adguard-home)
@@ -59,7 +59,7 @@ My network has a few additional considerations that may not apply to every deplo
 3. [AdGuard Home Synchronization](#adguard-home-synchronization)
 4. [Keepalived & Virtual IP](#keepalived--virtual-ip)
 5. [Health Checks & Automatic Failback](#health-checks--automatic-failback)
-6. [OPNsense Integration](#opnsense-integration)
+6. [OPNsense Configuration](#opnsense-configuration)
 7. [Testing & Verification](#testing--verification)
 8. [DNS Configuration Migration](#dns-configuration-migration)
 9. [Related Documentation](#related-documentation)
@@ -1188,7 +1188,7 @@ The primary Raspberry Pi remains the preferred instance. After recovering from a
 
 [🔼 Back to Overview](#overview)
 
-## OPNsense Integration
+## OPNsense Configuration
 
 Integrate the shared DNS Virtual IP into OPNsense while preserving the existing Dnsmasq, Unbound, and firewall configurations.
 
@@ -1206,13 +1206,13 @@ OPNsense previously redirected DNS traffic to the individual AdGuard Home addres
 
 This section covers:
 
-1. [OPNsense Back Up](#opnsense-back-up)
-2. [Create Aliases](#create-aliases)
+1. [Back Up OPNsense](#back-up-opnsense)
+2. [Create Firewall Aliases](#create-firewall-aliases)
 3. [Destination NAT](#destination-nat)
 4. [Firewall Rules](#firewall-rules)
 5. [Dnsmasq](#dnsmasq)
 
-### OPNsense Back Up
+### Back Up OPNsense
 
 > [!IMPORTANT]
 > Back up your OPNsense configuration before modifying NAT or firewall rules.
@@ -1222,14 +1222,14 @@ This section covers:
 3. Click **Download configuration**.
 4. Save the backup somewhere secure.
 
-### Create Aliases
+### Create Firewall Aliases
 
 Firewall aliases are reusable collections of IP addresses, networks, and ports. They allow us to update multiple firewall or NAT rules by modifying a single alias instead of editing each rule individually.
 
 1. Navigate to **Firewall → Aliases**.
 2. Click `+` to add a new alias.
 3. Create the aliases below.
-4. Click **Save**.
+4. Click **Save** after creating each alias.
 5. Click **Apply**.
 
 | Enabled | Name | Type | Content | Description |

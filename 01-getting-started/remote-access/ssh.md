@@ -9,7 +9,7 @@ SSH (Secure Shell) provides an encrypted terminal connection to a remote machine
 
 This guide covers connecting to remote servers from Windows, Linux, and macOS, including verifying SSH availability, transferring files securely, and troubleshooting common connection issues.
 
-## Prerequisites
+## 📋 Prerequisites
 
 - A reachable server or VM with an SSH server installed and configured to accept incoming connections.
 - A permitted user account and either a password or authorized SSH key.

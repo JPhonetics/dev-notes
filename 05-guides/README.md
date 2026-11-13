@@ -1,6 +1,6 @@
 ---
 Created: 2026-11-11
-Modified:
+Modified: 2026-11-13
 ---
 
 # Guides
@@ -14,6 +14,14 @@ Each guide focuses on a specific task, explaining the necessary concepts, comman
 Guides for managing Linux operating systems, user accounts, permissions, and system configurations.
 
 - [Create a Linux User](./linux/create-linux-user.md) — Check existing users, create accounts, manage passwords, configure sudo privileges, and verify user access.
+
+## Networking
+
+Guides for configuring network services, device communication, and connectivity across VLANs.
+
+- [Configure Chromecast Across VLANs](./networking/configure-chromecast-across-vlans.md) — Configure mDNS discovery and OPNsense firewall rules to allow Google Cast devices to communicate across VLANs.
+
+- [DNS High Availability](./networking/dns-high-availability.md) — Configure redundant AdGuard Home instances, Keepalived failover, and a shared virtual IP to maintain DNS availability.
 
 ## Proxmox
 
