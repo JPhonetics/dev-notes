@@ -236,7 +236,7 @@ After creating the account, verify that it exists, has the expected group member
 > [!NOTE]
 > After creating and verifying the user account, you can connect remotely if an SSH server is installed and configured to permit access.
 >
-> See [Connecting to Remote Servers with SSH](../../01-getting-started/remote-access/ssh.md) for connection instructions, authentication, and troubleshooting.
+> For instructions on connecting to remote servers using SSH from Windows, Linux, and macOS, see [Connecting to Remote Servers with SSH](../../01-getting-started/remote-access/ssh.md).
 
 [🔼 Back to Overview](#overview)
 

@@ -9,19 +9,6 @@ SSH (Secure Shell) provides an encrypted terminal connection to a remote machine
 
 This guide covers connecting to remote servers from Windows, Linux, and macOS, including verifying SSH availability, transferring files securely, and troubleshooting common connection issues.
 
-## Overview
-
-1. [Prerequisites](#prerequisites)
-2. [Install OpenSSH Client](#install-openssh-client)
-3. [Verify SSH on the Target Server](#verify-ssh-on-the-target-server)
-4. [Connect from Windows](#connect-from-windows)
-5. [Connect from Linux](#connect-from-linux)
-6. [Connect from macOS](#connect-from-macos)
-7. [File Transfers](#file-transfers)
-8. [Troubleshooting](#troubleshooting)
-9. [Related Documentation](#related-documentation)
-10. [Official Documentation](#official-documentation)
-
 ## Prerequisites
 
 - A reachable server or VM with an SSH server installed and running (commonly `sshd`).
@@ -35,6 +22,19 @@ This guide covers connecting to remote servers from Windows, Linux, and macOS, i
 
 > [!IMPORTANT]
 > On first connection, compare the server's SSH host-key fingerprint with a trusted fingerprint obtained from the administrator or local console before accepting it. This helps protect against connecting to the wrong system or an interception attempt.
+
+## Overview
+
+1. [Prerequisites](#prerequisites)
+2. [Install OpenSSH Client](#install-openssh-client)
+3. [Verify SSH on the Target Server](#verify-ssh-on-the-target-server)
+4. [Connect from Windows](#connect-from-windows)
+5. [Connect from Linux](#connect-from-linux)
+6. [Connect from macOS](#connect-from-macos)
+7. [File Transfers](#file-transfers)
+8. [Troubleshooting](#troubleshooting)
+9. [Related Documentation](#related-documentation)
+10. [Official Documentation](#official-documentation)
 
 ## Install OpenSSH Client
 

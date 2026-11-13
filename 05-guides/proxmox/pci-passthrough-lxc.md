@@ -46,7 +46,7 @@ See [Device-Specific Driver Installation](#device-specific-driver-installation) 
     ```
 
 > [!NOTE]
-> For instructions on connecting to remote servers from Windows, Linux, or macOS, including SSH authentication, custom ports, and file transfer, see [Connecting to Remote Servers with SSH](../../01-getting-started/ssh/connecting-to-remote-servers.md).
+> For instructions on connecting to remote servers using SSH from Windows, Linux, and macOS, see [Connecting to Remote Servers with SSH](../../01-getting-started/ssh/connecting-to-remote-servers.md).
 
 2. Update the local PCI ID database before identifying the hardware. This ensures `lspci` uses the latest available PCI vendor and device names instead of potentially outdated information.
 

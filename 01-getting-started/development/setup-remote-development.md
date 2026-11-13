@@ -83,8 +83,8 @@ For this guide, I will be creating an Ubuntu Server VM using Proxmox VE because 
     | Memory | 8192 MiB (8 GiB) |
     | Network | VirtIO, appropriate bridge and VLAN ID |
 
-  > [!NOTE]
-  > These are suggested starting resources. Increase the CPU, RAM, or storage as development workloads grow. The `host` CPU type is suitable for a VM that remains on the same physical host, but can limit migration compatibility with hosts using different CPUs.
+> [!NOTE]
+> These are suggested starting resources. Increase the CPU, RAM, or storage as development workloads grow. The `host` CPU type is suitable for a VM that remains on the same physical host, but can limit migration compatibility with hosts using different CPUs.
 
 7. Review the configuration and click **Finish**.
 
@@ -202,7 +202,7 @@ SSH provides encrypted remote access to the development server. This allows VS C
 > [!NOTE]
 > If you need to create another Linux account, see [Create a Linux User](../../05-guides/linux/create-linux-user.md). Ubuntu Server already allows you to create an account during installation, so an additional account is not required if the existing account meets your needs.
 >
-> For detailed SSH connection instructions, authentication methods, and troubleshooting, see [Connecting to Remote Servers with SSH](../remote-access/ssh.md).
+> For instructions on connecting to remote servers using SSH from Windows, Linux, and macOS, see [Connecting to Remote Servers with SSH](../remote-access/ssh.md).
 
 [🔼 Back to Overview](#overview)
 
