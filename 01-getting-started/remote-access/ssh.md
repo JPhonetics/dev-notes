@@ -1,6 +1,6 @@
 ---
 Created: 2026-11-10
-Modified: 
+Modified: 2026-11-13
 ---
 
 # Connecting to Remote Servers with SSH
@@ -11,7 +11,7 @@ This guide covers connecting to remote servers from Windows, Linux, and macOS, i
 
 ## Prerequisites
 
-- A reachable server or VM with an SSH server installed and running (commonly `sshd`).
+- A reachable server or VM with an SSH server installed and configured to accept incoming connections.
 - A permitted user account and either a password or authorized SSH key.
 - Network/firewall permission for the server's SSH port (usually TCP `22`).
 
@@ -20,21 +20,17 @@ This guide covers connecting to remote servers from Windows, Linux, and macOS, i
 >
 > If you need a non-root account, see [Create a Linux User](../../05-guides/linux/create-linux-user.md) for instructions on creating an account and configuring optional sudo privileges.
 
-> [!IMPORTANT]
-> On first connection, compare the server's SSH host-key fingerprint with a trusted fingerprint obtained from the administrator or local console before accepting it. This helps protect against connecting to the wrong system or an interception attempt.
-
 ## Overview
 
-1. [Prerequisites](#prerequisites)
-2. [Install OpenSSH Client](#install-openssh-client)
-3. [Verify SSH on the Target Server](#verify-ssh-on-the-target-server)
-4. [Connect from Windows](#connect-from-windows)
-5. [Connect from Linux](#connect-from-linux)
-6. [Connect from macOS](#connect-from-macos)
-7. [File Transfers](#file-transfers)
-8. [Troubleshooting](#troubleshooting)
-9. [Related Documentation](#related-documentation)
-10. [Official Documentation](#official-documentation)
+1. [Install OpenSSH Client](#install-openssh-client)
+2. [Verify SSH on the Target Server](#verify-ssh-on-the-target-server)
+3. [Connect from Windows](#connect-from-windows)
+4. [Connect from Linux](#connect-from-linux)
+5. [Connect from macOS](#connect-from-macos)
+6. [File Transfers](#file-transfers)
+7. [Troubleshooting](#troubleshooting)
+8. [Related Documentation](#related-documentation)
+9. [Official Documentation](#official-documentation)
 
 ## Install OpenSSH Client
 
@@ -85,9 +81,12 @@ macOS includes the OpenSSH client by default, available through **Terminal**. No
 
 ## Verify SSH on the Target Server
 
-Before connecting remotely, the target server must have an SSH server installed, running, and listening on the configured network port.
+Before connecting remotely, the target server must have an SSH server installed and configured to accept incoming connections on the designated network port.
 
 The following commands are intended for Debian/Ubuntu servers and must be executed directly on the **target server**, not the computer initiating the SSH connection. If SSH is unavailable, use the server's local console or an authorized virtualization management console.
+
+> [!NOTE]
+> The SSH port must be accessible through the server's firewall and network. A listening port confirms that a service is accepting connections locally, but does not guarantee that remote computers can reach it.
 
 ### Check the SSH Service
 
@@ -126,10 +125,10 @@ The following commands are intended for Debian/Ubuntu servers and must be execut
 
     Depending on the server's configuration, the SSH listening socket may be managed by `systemd` instead of appearing directly under `sshd`.
 
-> [!NOTE]
-> The SSH port must be accessible through the server's firewall and network. A listening port confirms that a service is accepting connections locally, but does not guarantee that remote computers can reach it.
-
 [🔼 Back to Overview](#overview)
+
+> [!IMPORTANT]
+> On your first SSH connection, verify the server's host-key fingerprint against a trusted source before accepting it. This helps confirm that you're connecting to the intended server and protects against potential interception.
 
 ## Connect from Windows
 
